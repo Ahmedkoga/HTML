@@ -2,28 +2,29 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="exo4.css">
     <title>Exercice 6</title>
   </head>
   <body>
     <form action="#" method="POST">
-    <fieldset>
-        <legend>Votre identité</legend>
+    <fieldset id="form1">
+        <legend id="legendId1">Votre identité</legend>
         <ol>
           <li><label for="nom">Nom : </label><input name="nom" type="text" id="nom" placeholder="Nom"/></li>
           <li><label for="penom">Prénom : </label><input type="text" name="prenom" id="prenom" placeholder="Prénom"/></li>
           <li><label for="adressemail">Adresse mail : </label><input type="email" name="adressemail" id="adressemail" placeholder="Adresse mail"/></li>
         </ol>
       </fieldset>
-      <fieldset>
-        <legend>Adresse de livraison</legend>
+      <fieldset id="form2">
+        <legend id="legendId2">Adresse de livraison</legend>
         <ol>
           <li><label for="adresse">Adresse : </label><textarea rows="5" cols="10" name="adresse" id="adresse"></textarea></li>
           <li><label for="codepostal">Code postal : </label><input type="text" name="codepostal" id="codepostal" maxlength="5" pattern="[0-9]{5}" placeholder="Code postal"/></li>
           <li><label for="ville">Ville : </label><input type="text" name="ville" id="ville" placeholder="Ville"/></li>
         </ol>
       </fieldset>
-      <fieldset>
-        <legend>Informations de règlement</legend>
+      <fieldset id="form3">
+        <legend id="legendId3">Informations de règlement</legend>
         <ol>
           <li>Type de carte bancaire :
             <ul>

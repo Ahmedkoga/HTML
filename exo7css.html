@@ -3,11 +3,12 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="exo7.css">
 	<title>Exercice 7</title>
 	
 </head>
 <body>
-	<header id="header">
+	<header>
 		<nav>
 			<ul>
 				<li><a href="#">Home</a></li>
@@ -18,23 +19,24 @@
 	</header>
 	<main>
 		<article>
-			<section id="sectinForm">
-				<form id="formId">
-					<p>Sign in :</p>
-						<label>Email :<input type="email" name="email" placeholder="user@gmail.com"></label><br>
-						<label>Password :<input type="password" name="password" placeholder="*****"></label><br>
-					  	<button type="submit">Login</button><br>
+			<section  id="sec" >
+				<img id="imageLogin" src="login-image.jfif">
+				<form >
+						<label>Email :<input type="email" name="email"title="email" alt="email" placeholder="user@gmail.com"></label>
+						<label>Password :<input type="password" name="password" title="password" alt="password" placeholder="*****"></label>
+					  	<button type="submit">Login</button>
 					  	<label><input type="checkbox" checked="checked" name="remember">Remember me</label>
 	    			<span class="psw">Forgot <a href="#">password?</a></span>
 	    		</form>
 			</section>
 		</article>
-		<aside id="asidePub">
-			<img src="amiens-2.jpg" alt="ville d'amiens"><br><br>
+		<aside>
+			<img src="amiens-2.jpg" alt="ville d'amiens">
+			<img src="amiens-2.jpg" alt="ville d'amiens">
 		</aside>
 	</main>
 	<footer>
-		<nav>
+		<nav id="navFooter">
 				<a href="#">Home</a>
 				<a href="#">Produits</a>
 				<a href="#">Contact</a>
