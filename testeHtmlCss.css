@@ -1,0 +1,87 @@
+body
+{
+	background-image: url(image1.jfif);
+}
+#div1
+{
+	opacity: 0.7;
+	display: flex;
+}
+#div2
+{
+	background: blue;
+	width: 30%;
+	height: 300px;
+	padding: 0;
+	margin: 0;
+	margin-left: 20%;
+	margin-top: 5%;
+	color: #ffffff;
+	font-size: 16px; 
+	text-align: center;
+}
+#div3
+{
+	background: #ffffff;
+	width: 30%;
+	height: 300px;
+	padding: 0;
+	margin: 0;
+	margin-top: 5%;
+}
+#div2:hover
+{
+ border: 3px dashed #ffffff;
+}
+#div3:hover
+{
+	border: 3px dashed blue;
+}
+#formId input
+{
+	width: 95%;
+	padding: 10px;
+	margin-top:20px;
+	margin-left: 10px;
+	box-sizing: border-box;
+	background: #ffffff;
+	border-radius: 10px;
+
+}
+button
+{
+	background: red;
+	padding: 8px;
+	border-radius: 10px;
+	display: flex;
+	margin: 30px;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+}
+button:hover
+{
+	/*background: #ffffff;*/
+	box-shadow: 5px 10px 10px #ffffff;
+}
+#formId input:hover
+{
+	box-shadow: 5px 10px 15px blue;
+}
+#container
+{
+	text-align: center;
+	margin-top: 120px;
+	font-size: 20px;
+	background: #fff;
+	padding: 6px;
+	letter-spacing: 3px;
+	word-spacing:8px;
+	opacity: 0.8;
+}
+.labelClass
+{
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+}

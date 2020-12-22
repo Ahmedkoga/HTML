@@ -4,14 +4,14 @@ table
 	border-collapse:collapse;
 
 }
-tr
+tr,td
 {
 	border:1px solid black;
 }
-td
+/*td
 {
 	border:1px solid black;
-}
+}*/
 #tfootTdSpace
 {
 	text-align: center;
