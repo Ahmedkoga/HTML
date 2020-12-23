@@ -9,12 +9,13 @@
 }
 footer
 {
-	background: black;
+	/*background: black;*/
 	padding: 5px;
 }
 #idNavFooter a
 {
 	margin-left: 18%;
+	color: #ffffff;
 }
 article
 {

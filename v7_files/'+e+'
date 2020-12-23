@@ -1,0 +1,864 @@
+<!DOCTYPE html><html lang="fr" class="responsive"><head>
+<meta charset="utf-8">
+<script src="https://www.lacentrale.fr/static/fragment-mozart/2.3.6-require.js" crossorigin></script>
+<script>var Pipe=(function(e,n){function t(){for(var e,n=c.length-1;n>=0;n--)if((e=c[n]).hasAttribute("data-pipe"))return e.removeAttribute("data-pipe"),e}function o(){0!==l.length||!e.readyState||"complete"!==e.readyState&&"interactive"!==e.readyState||h.onDone()}function r(e){return"object"==typeof e&&"function"==typeof e.then}function i(e,n,t,i){h.onBeforeInit(t,i);var a=e(n),f=function(){l.pop(),h.onAfterInit(t,i),o(t)};r(a)?a.then(f).catch(f):f()}function a(e,t){!1 in n||p.push({name:e,duration:Number(t),entryType:"tailor",startTime:n.now()||Date.now()-n.timing.navigationStart})}function f(e){return function(n){h[e]=n}}var d={},u={},c=e.getElementsByTagName("script"),l=[],p=[],s=function(){},h={onStart:s,onBeforeInit:s,onAfterInit:s,onDone:s};return{placeholder:function(e){d[e]=t()},start:function(e,n,o){u[e]=t(),n&&(l.push(e),h.onStart(o,e),require([n]))},end:function(e,n,r){var a,f=d[e],c=u[e],p=t(),s=c;if(f){do{a=s,s=s.nextSibling,f.parentNode.insertBefore(a,f)}while(a!==p);f.parentNode.removeChild(f)}for(a=c.nextSibling;a&&1!==a.nodeType;)a=a.nextSibling;a===p&&(a=void 0),c.parentNode.removeChild(c),p.parentNode.removeChild(p),n&&require([n],function(n){var t=n&&n.__esModule?n.default:n;if("function"!=typeof t)return l.pop(),h.onBeforeInit(r,e),h.onAfterInit(r,e),void o();i(t,a,r,e)})},loadCSS:/* @preserve - loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+function(n){function t(n){if(e.body)return n();setTimeout(function(){t(n)})}function o(){i.addEventListener&&i.removeEventListener("load",o),i.media="all"}var r,i=e.createElement("link"),a=(e.body||e.getElementsByTagName("head")[0]).childNodes;r=a[a.length-1];var f=e.styleSheets;i.rel="stylesheet",i.href=n,i.media="only x",t(function(){r.parentNode.insertBefore(i,r.nextSibling)});var d=function(e){for(var n=i.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){d(e)})};return i.addEventListener&&i.addEventListener("load",o),i.onloadcssdefined=d,d(o),i},onStart:f("onStart"),onBeforeInit:f("onBeforeInit"),onAfterInit:f("onAfterInit"),onDone:f("onDone"),addPerfEntry:a,addTTFMPEntry:function(e){a("ttfmp",e)},getEntries:function(){return p}}})(window.document,window.performance);</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/commons-691b5b2f.css"><script data-pipe>Pipe.start(0)</script>
+<script src="https://polyfill.io/v2/polyfill.min.js?features=fetch,Promise,Array.from,Element.prototype.remove,Element.prototype.prepend&flags=gated"></script>
+<script src="/static/fragment-mozart/mozart2.js"></script>
+<script src="https://browser.sentry-cdn.com/5.24.2/bundle.min.js" integrity="sha384-8x1Z8KjWCA4KJ7mh5cTEtm1Jngg4yEZDYTAU3A4HfHdtaiCYba4cCuJDHQ3zc2Qe" crossorigin="anonymous"></script>
+<script>(function(){}())</script>
+<script>
+    (function(d) {
+      require.config({
+        waitSeconds: 45
+      });
+      require(d);
+      const dependencies = [
+        'react',
+        'react-dom',
+        'jquery',
+        'prop-types',
+        'cbm-auth',
+        'cbm-helpers',
+        'cbm-popins',
+        'mobile-detect',
+        '@axel-springer-kugawana/cbm-libs-logging',
+        '@axel-springer-kugawana/cbm-lc-storybook'
+      ]
+      while (i = dependencies.pop())(function(dep) {
+        define(dep, d, function(b) {
+          return b[dep];
+        })
+      })(i);
+    }(['https://www.lacentrale.fr/static/fragment-layout/commons-691b5b2f.js']));
+    </script>
+<script data-pipe>Pipe.end(0)</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/home-f1f0472d.css"><script data-pipe>Pipe.start(1, "https://www.lacentrale.fr/static/fragment-layout/head-f1f0472d.js", {"primary":false,"id":1,"range":[1,1]})</script>
+<!--[if IE]>
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.lacentrale.fr/static/assets/favicon/favicon.ico" />
+<![endif]-->
+<link rel="icon" type="image/jpeg" sizes="16x16" href="https://www.lacentrale.fr/static/assets/favicon/favicon-16x16.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.lacentrale.fr/static/assets/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.lacentrale.fr/static/assets/favicon/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.lacentrale.fr/static/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="manifest" href="https://www.lacentrale.fr/static/assets/favicon/site.webmanifest">
+<meta name="msapplication-config" content="https://www.lacentrale.fr/static/assets/favicon/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="HandheldFriendly" content="true"/>
+<script>
+  var fragmentHeadLocals = '{"isTestPage":false,"vertical":"auto","site":{"commandersAct":{"label":"LC"},"appTracker":{"label":"LC"}},"page":{"id":"home","section":"home","xiti":{"mvTesting":{}}}}';
+</script>
+<script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+  (function(w, d, e, u, c, g, a, b){
+    w["SSJSConnectorObj"] = w["SSJSConnectorObj"] || {ss_cid : c, domain_info: g};
+    a = d.createElement(e);
+    a.async = true;
+    a.src = u;
+    b = d.getElementsByTagName(e)[0];
+    b.parentNode.insertBefore(a, b);
+
+  })(window,document,"script","https://cdn.perfdrive.com/aperture/aperture.js","81b2","auto");
+
+  googletag.pubads().addEventListener("slotRenderEnded", function (e) {
+    if (e.isEmpty || e.advertiserId == csm_advertiser_id) { // check if GAM returned an ad or returned a fallback ad (noads.js)
+        window.ADNXSMediation && window.ADNXSMediation.noAd(); // if true, send no ad signal to display 2nd highest bid
+    }
+  });
+
+  try {
+    var googleOptions = localStorage.getItem('googleOptions');
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function(){
+        googletag.pubads().setRequestNonPersonalizedAds(googleOptions);
+        googletag.pubads().refresh(); 
+    });
+  } catch (e) {
+    // localStorage access denied ("Block third-party cookies and site data" is checked by user)
+  }
+
+</script>
+<script data-pipe>Pipe.end(1, "https://www.lacentrale.fr/static/fragment-layout/head-f1f0472d.js", {"primary":false,"id":1,"range":[1,1]})</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/tracking-f1f0472d.css"><script data-pipe>Pipe.start(2, "https://www.lacentrale.fr/static/fragment-layout/tracking-f1f0472d.js", {"primary":false,"id":2,"range":[2,2]})</script>
+<title>Voiture occasion - Annonces auto - La Centrale </title><meta name="description" content="Sur La Centrale &amp;reg; retrouvez plus de 320 000 annonces vérifiées de véhicules d&#x27;occasion, vendus par des particuliers et des professionnels dans toute la France."/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><meta name="verify-v1" content="Dki2GpTFbWZH7OOre7BrGKprfieJajwZfD9gIFcsj/4="/><meta name="HandheldFriendly" content="true"/><meta name="referrer" content="unsafe-url"/><meta property="og:title" content="La Centrale"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.lacentrale.fr"/><meta property="og:image" content="https://www.lacentrale.fr/static/fragment-layout/logo_lacentrale-574bc3ad.png"/><meta name="robots" content="NOODP"/><meta name="msvalidate.01" content="07BACEA404E25CE3BD521E584445F300"/><meta name="google" content="nositelinkssearchbox"/><meta name="google-site-verification" content="2fSQHPshGrL-gvkBmxEn5l6XsnKL45UolK-HID61gI8"/>
+<label id="trackingStateContainer" style="display: none;">null</label>
+<script>
+        window.fragment_tracking_locals = {"isTestPage":false,"vertical":"auto","site":{"commandersAct":{"label":"LC"},"appTracker":{"label":"LC"}},"page":{"id":"home","section":"home","xiti":{"mvTesting":{}}}};
+        window.fragment_tracking_state = null;
+        var fragment_tracking_locals = window.fragment_tracking_locals;
+        var fragment_tracking_state = window.fragment_tracking_state;
+      </script>
+<script data-pipe>Pipe.end(2, "https://www.lacentrale.fr/static/fragment-layout/tracking-f1f0472d.js", {"primary":false,"id":2,"range":[2,2]})</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/header-f1f0472d.css"></head>
+<body class="CBM_page CBM_page_home">
+<section class="containerGlobal">
+<script data-pipe>Pipe.start(3, "https://www.lacentrale.fr/static/fragment-layout/header-f1f0472d.js", {"primary":false,"id":3,"range":[3,3]})</script><script>window.placeAdButtonState = {"sellingUrl":"https://www.lacentrale.fr/vendre-voiture"}</script>
+<div class="habillageContainer2 hiddenPhone cbm--hiddenPrint">
+<div data-pub-appnexus="Habillage" class="habillageContainer"></div>
+</div>
+<div data-pub-appnexus="Interstitiel" class="interstitielContainer txtC cbm--hiddenPrint"></div>
+<p class="containerSite upSystem cbm--hiddenPrint">
+<a href="#top" name="top" id="top"></a>
+</p>
+<div id="ss_098786_234239_238479_190541"></div>
+<div class="containerNavMobile cbm--hiddenPrint">
+<nav class="navMobile cbm--onlyPhone">
+<ul>
+<li>
+<a class="cbm-btn--3 cbm-btn--openMobileMenu" rel="nofollow" href="javascript:;">
+<span>
+<i class="iconLine"></i>
+<i class="iconLine"></i>
+<i class="iconLine"></i>
+</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--3 btSearchMobile " href="https://www.lacentrale.fr/listing">
+<i class="cbm-picto--zoomWhite scale90"></i>
+<span class="counterBadge hidden badgeCriteriaNumber">12</span>
+</a>
+</li>
+</ul>
+<span class="logoForMobile">
+<a href="https://www.lacentrale.fr" class="logoLink">
+<img src="https://www.lacentrale.fr/static/fragment-layout/logo_lacentrale-574bc3ad.png" alt="La Centrale, 1er site de véhicules d&#x27;occasion" class="vMiddle logo"/>
+</a>
+</span>
+<ul class="toolbarMobileRight">
+<li>
+<a class="cbm-btn--3" rel="nofollow" href="https://www.lacentrale.fr/panier.php">
+<i class="cbm-picto--favActiveWhite scale90"></i>
+</a>
+</li>
+<li id="PopinAuthenticationMobile">
+<a class="cbm-btn--3 cbm-btn--accountAccess" rel="nofollow">
+<i class="cbm-picto--accountWhite scale90"></i>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<header class="containerHeader">
+<section class="containerBanner">
+<section class="containerSite">
+<div class="jsAppnexusBanner">
+&nbsp;
+</div>
+<div class="expresswayContainer hiddenPhone jsOneAd">
+<div class="stationContainer">
+<div data-pub-appnexus="Station1"></div>
+<div data-pub-appnexus="Station2"></div>
+<div data-pub-appnexus="Station3"></div>
+<div data-pub-appnexus="Station4"></div>
+</div>
+</div>
+</section>
+</section>
+<div class="containerBaselineAndMenu">
+<section class="containerBaseline hiddenPhone">
+<section class="containerSite">
+<div class="floatL logoContainer">
+<a class="logoLink" href="https://www.lacentrale.fr">
+<img class="vMiddle logo" id="logo" src="https://www.lacentrale.fr/static/fragment-layout/logo_lacentrale-574bc3ad.png" alt="La Centrale, 1er site de véhicules d&#x27;occasion" width="182" height="41"/>
+<span class="cbm--onlyDesktop cbm--hiddenPrint mL15 cbm-size--1 baseLineTxt">
+1er site de véhicules d&#x27;occasion
+</span>
+</a>
+</div>
+<section class="baselineMenu cbm--hiddenPrint">
+<span class="DropdownMenu" id="AccountDropdownMenu">
+<span id="PopinAuthentication">
+</span>
+<span class="DropdownMenu__menu">
+<div class="cpt-part-menu">
+<div class="cbm--onlyPhone floatR mR15">
+<span class="triangle triangleB vMiddle"></span>
+</div>
+<ul>
+<li class="Customer__privatePerson Customer__hasAds ">
+<a href="https://www.lacentrale.fr/compte_menu.php?mod=1&pro=&service=" rel="nofollow" data-xtclick='{"label":"PART::Mes_annonces", "typeClick":"navigation"}'>
+Mes annonces
+</a>
+</li>
+<li class="cbm--active">
+<a href="https://messagerie.lacentrale.fr" rel="nofollow" data-xtclick='{"label":"PART::Mes_emails_recus", "typeClick":"navigation"}'>
+Ma messagerie
+</a>
+</li>
+<li class="Customer__privatePerson myProfilLink ">
+<a href="https://www.lacentrale.fr/compte_update.php?mod=1&what=ident&back=compte_menu.php" rel="nofollow" data-xtclick='{"label":"PART::Mon_profil", "typeClick":"navigation"}'>
+Mon profil
+</a>
+</li>
+<li class="">
+<a href="https://www.lacentrale.fr/compte/notification/recherche" rel="nofollow" data-xtclick='{"label":"PART::Mes_alertes", "typeClick":"navigation"}'>
+Mes recherches
+</a>
+</li>
+<li class="">
+<a href="https://www.lacentrale.fr/compte/notification/prix" rel="nofollow" data-xtclick='{"label":"PART::Mes_alertes_prix", "typeClick":"navigation"}'>
+Mes alertes prix
+</a>
+</li>
+<li class="">
+<a href="https://www.lacentrale.fr/panier.php" rel="nofollow" data-xtclick='{"label":"PART::Mes_favoris", "typeClick":"navigation"}'>
+Mes favoris
+</a>
+</li>
+<li class="Customer__privatePerson"><a href="https://www.lacentrale.fr/vendre-voiture.php#prices"> Tarifs </a></li>
+<li class="Customer__privatePerson"><a href="https://www.lacentrale.fr/vendre-voiture.php"> D&eacute;poser une annonce </a></li>
+<li class="logoutLink">
+<a href="https://depot.lacentrale.fr/logout" rel="nofollow">
+<span class="cbm-picto--disconnect"></span>
+<span>Se déconnecter</span>
+</a>
+</li>
+</ul>
+</div>
+</span>
+</span>
+<span class="DropdownMenu --hasDropdownMenu" id="BookmarkDropdownMenu">
+<span class="DropdownMenu__icon circ circ30">
+<i class="cbm-picto--favActiveWhite scale80"></i>
+</span>
+<span class="DropdownMenu__label">
+Mes favoris
+<span class="DropdownMenu__count cbm-txt--1"></span>
+</span>
+<span class="DropdownMenu__menu"></span>
+</span>
+<a class="cbm-btn--2 cbm-btn--depotMenu noBold Customer__depositLink cbm--hiddenPrint" href="https://www.lacentrale.fr/vendre-voiture" title="Déposer une annonce de voiture d&#x27;occasion" data-xtclick="{&quot;label&quot;:&quot;Header::deposer_votre_annonce&quot;, &quot;typeClick&quot;:&quot;navigation&quot;}" data-reactroot=""><span><span class="cbm-bullet--plus">+</span>Publier une annonce gratuitement</span></a>
+</section>
+</section>
+</section>
+<nav class="containerMenu hiddenPhone cbm--hiddenPrint">
+<section class="containerSite relative">
+<ul class="rubLinks">
+<li class="hiddenTablet ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::accueil&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/" title="Achat et vente voiture d&#x27;occasion">
+Accueil
+</a>
+</li>
+<li class="toSearchMobile ">
+<a class="Customer__depositLink" data-xtclick="{&quot;label&quot;:&quot;Header::vendre&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/vendre-voiture" title="Déposer une annonce de voiture d&#x27;occasion">
+Vendre
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::rechercher&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/listing" title="Rechercher une voiture d&#x27;occasion">
+Rechercher
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::cote&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/lacote_origine.php" title="Cote gratuite, argus gratuit de voitures d&#x27;occasion">
+Cote
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::fiches_techniques&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/fiche-technique-auto.php" title="Fiches techniques voitures d&#x27;occasion">
+Fiches techniques
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::services&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/services?vertical&#x3D;auto" title="Assurance, financement...">
+Services
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::conseils&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/conseils/" title="Mieux acheter et mieux vendre une voiture d&#x27;occasion">
+Conseils
+</a>
+</li>
+<li class=" ">
+<a data-xtclick="{&quot;label&quot;:&quot;Header::annuaire_des_pros&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" href="https://www.lacentrale.fr/pro_list.php?rubrique&#x3D;VEHICULES" title="Les vitrines des professionnels de l&#x27;occasion">
+<span class="hiddenTablet">Annuaire des professionnels</span>
+<span class="cbm--onlyTablet">Professionnels</span>
+</a>
+</li>
+</ul>
+</section>
+</nav>
+</div>
+</header>
+<script data-pipe>Pipe.end(3, "https://www.lacentrale.fr/static/fragment-layout/header-f1f0472d.js", {"primary":false,"id":3,"range":[3,3]})</script>
+<section class="containerSite containerContent">
+<script data-pipe>Pipe.start(4, "https://www.lacentrale.fr//static/fragment-recherche-front/home.792d1d7a.js", {"primary":true,"id":4,"range":[4,4]})</script><div id="recherche-react-home"><div><div class="line line1 relative cat_auto"><div class="homeMainImg cbm--hiddenPhone"></div><div class="searchEngine" id="recherche"><span class="searchEngineTitle">Voitures d&#x27;occasion</span><div class="searchEngineFields categoriesFields"><a href="javascript:" data-xtclick="{&quot;label&quot;:&quot;Recherche::Avancee&quot;, &quot;typeClick&quot;:&quot;navigation&quot;}" title="Plus de critères pour trouver un véhicule d occasion" class="advancedSearch cbm--hiddenPhone" rel="nofollow">Recherche avancée</a><div class="searchEngineCat cbm--clearPhone"><ul><li class="cbm--active"><a data-xtclick="{&quot;label&quot;:&quot;Picto_Moteur::auto&quot;, &quot;typeClick&quot;:&quot;navigation&quot;}" title="Voiture occasion" href="/"><span height="35" class="icon-wrapper"><span class="icon icon-color--6"><svg width="35" height="35" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#000" d="M6.149 13.43c.916 0 1.658.741 1.658 1.658a1.847 1.847 0 01-.05.399 1.658 1.658 0 01-3.26-.252c-.005-.049-.01-.097-.01-.147 0-.002.003-.003.003-.003a1.658 1.658 0 011.659-1.655zm11.785 0c.917 0 1.659.741 1.659 1.658 0 .033-.003.066-.004.098-.003.051-.01.102-.016.15a1.658 1.658 0 01-3.29-.101c-.004-.049-.009-.097-.009-.147l.001-.003a1.658 1.658 0 011.66-1.655zm-11.786.717a.94.94 0 00-.942.939v.002a.986.986 0 00.017.17.941.941 0 001.864-.114l.003-.056a.941.941 0 00-.942-.941zm11.786 0c-.52 0-.941.42-.942.939v.002a.986.986 0 00.017.17.941.941 0 001.865-.114l.001-.056a.94.94 0 00-.94-.941zM10.756 8c3.438.032 6.211 2.352 6.32 2.454l.075.07c.137.066.569.224 1.887.484 1.87.367 2.226.962 2.292 1.193.15.11.393.377.43.69.031.248.1.35.1.35l.033.04v1.76l-.003.031c-.101.468-1.58.655-1.753.651.017-.048.403-2.828-2.162-2.874-2.598-.047-2.297 2.739-2.28 2.787-2.45-.051-4.845-.074-7.258-.136.01-.049.203-2.61-2.153-2.698-2.273-.083-2.43 2.074-2.435 2.387v.037c-.46-.075-.448-.185-.648-.578-.344-.67-.168-1.58-.046-1.773.066-.104.1-.512.13-.873.026-.319.056-.681.113-.993.041-.218.13-.508.428-.508.031 0 .061.003.09.006.02.001.04.004.069.004 0 0 .01-.009.023-.046.087-.252.456-.565.931-.948a4.93 4.93 0 00.315-.266c-.022-.152-.018-.336.087-.464a.37.37 0 01.299-.131c.024 0 .049.001.103.006.115 0 .345-.047.662-.112.817-.168 2.068-.572 4.351-.55zm.176.608h-.01l.047 1.943s4.128.106 4.678.082c-.707-1.821-4.726-2.026-4.726-2.026zm-.776-.008s-1.963-.028-3.07.684l-.012 1.226 3.105.035z"></path></g></svg></span></span></a><div class="searchEngineCatSelector"><i class="triangle triangleT cbm-border--6"></i></div></li><li class=""><a data-xtclick="{&quot;label&quot;:&quot;Picto_Moteur::utilitaire&quot;, &quot;typeClick&quot;:&quot;navigation&quot;}" title="Utilitaire occasion" href="/utilitaire-occasion.php"><span height="35" class="icon-wrapper"><span class="icon icon-color--6"><svg width="35" height="35" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#000" d="M18.54 14.745c.775 0 1.411.63 1.411 1.405 0 .779-.636 1.41-1.411 1.41a1.414 1.414 0 01-1.412-1.41c0-.775.63-1.405 1.412-1.405zm-9.833 0a1.408 1.408 0 11-1.41 1.405c0-.775.63-1.405 1.41-1.405zm9.833.636a.77.77 0 00-.77.769c0 .431.344.768.77.768a.767.767 0 00.769-.768.77.77 0 00-.769-.77zm-9.833 0a.767.767 0 100 1.537.77.77 0 00.769-.768.773.773 0 00-.769-.77zm10.47-7.04v.698a.39.39 0 00.022.135l.974 2.917c.02.058.063.105.118.128l1.45.621c.157.067.259.22.259.39v2.494c0 .235-.19.426-.425.426h-.73l-.42-.336a1.86 1.86 0 00-.174-.536 1.927 1.927 0 00-1.711-1.045c-.946 0-1.73.68-1.892 1.576a.418.418 0 01-.413.34H10.66c0-.086.073-.662-.356-1.147h5.24c.235 0 .425-.19.425-.425V8.764c0-.233.19-.424.425-.424h2.783zM7.169 15a1.91 1.91 0 00-.384 1.149H5.001l-1.453-.368v-.78H7.17zm8.139-8v7.557H3V7h12.308zm3.358 2.877h-1.79v2.305h2.559l-.769-2.305z"></path></g></svg></span></span></a></li><li class=""><a data-xtclick="{&quot;label&quot;:&quot;Picto_Moteur::moto&quot;, &quot;typeClick&quot;:&quot;navigation&quot;}" title="Moto, scooter et quad occasion" href="/moto-occasion.php"><span height="35" class="icon-wrapper"><span class="icon icon-color--6"><svg width="35" height="35" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#000" d="M4.015 15.1a2.061 2.061 0 01-.063-.484c0-.76.422-1.414 1.034-1.772l.338.822c-.169.127-.317.274-.402.486-.084.19-.105.4-.084.611l-.823.338zm.19.507l.823-.337c.127.168.275.316.486.4.19.085.4.106.612.085l.338.823a1.812 1.812 0 01-.486.063c-.76 0-1.415-.422-1.773-1.034zm2.765.76l-.316-.781 1.224-.316a1.944 1.944 0 01-.908 1.097zm.317-3.334l-1.457.422-.337-.822a1.76 1.76 0 01.485-.064c.486 0 .93.17 1.309.464zm10.26 2.912a1.853 1.853 0 01-.402-1.055l.907.126a.76.76 0 00.127.296l-.633.633zm.336.38l.635-.633c.19.105.38.168.61.168.234 0 .444-.063.613-.168l.634.632c-.338.275-.76.423-1.224.423-.444 0-.887-.148-1.268-.423zm2.893-.338l-.633-.633c.105-.19.169-.38.169-.612 0-.232-.064-.443-.17-.611l.634-.634c.275.338.422.76.422 1.224 0 .464-.169.886-.422 1.266zm-.38-2.89l-.633.633c-.128-.064-.233-.127-.359-.148l-.718-.422c-.19-.105-.148-.4.063-.443.127-.021.275-.042.402-.042.464 0 .907.169 1.245.422zM3.002 14.742c.063 1.498 1.266 2.742 2.765 2.911 1.626.127 3.019-1.054 3.209-2.594.19-.064.38-.148.612-.211v.063c-.043.38-.17.76-.401 1.076-.063.084 0 .21.105.21h6.946v-.147c.02-.253.042-.78.063-1.224h.063c.043 1.456 1.245 2.68 2.723 2.722A2.834 2.834 0 0022 14.721c0-1.224-.76-2.237-1.815-2.616l.253-.19s-.739-.38-1.245-.337c-.254.02-.464.084-.655.169 1.203-.844 1.985-.592 2.238-.929.21-.274-.697-1.329-1.372-2.088a8.18 8.18 0 00-.993-.886c.022-.106 0-.591-.421-.844l-.233.337c-.232-.148-.38-.253-.38-.253s-1.372.486-1.182.676l.78.695s-.822.085-.906.338c-.064.126.063.548.063.548h-.148a.49.49 0 00-.148-.168c-.063-.042-.38-.169-.802-.338-.021-.085-.063-.148-.126-.169l-.212-.063a.162.162 0 00-.169.042c-.675-.21-1.477-.4-2.026-.316-.19.042-1.014.126-1.478 1.181l-1.963.084a3.74 3.74 0 01-1.266-.485c-.106-.063-.17-.042-.212 0-.02-.042-.062-.063-.084-.105a1.416 1.416 0 00-.59-.464c-.718-.295-.782-.675-.866-.675-1.415 0-2.977.548-2.787 1.012a.496.496 0 00.296.254l2.765.928c.317.105.57.337.718.654v.021c.253.59.717 1.076 1.266 1.414l.38.231-.4.296a2.964 2.964 0 00-2.281-1.055 3.01 3.01 0 00-2.997 3.122z"></path></g></svg></span></span></a></li><li class=""><a data-xtclick="{&quot;label&quot;:&quot;Picto_Moteur::loisir&quot;, &quot;typeClick&quot;:&quot;navigation&quot;}" title="Camping-car et caravane occasion" href="/camping_car-caravane-occasion.php"><span height="35" class="icon-wrapper"><span class="icon icon-color--6"><svg width="35" height="35" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path fill="#000" d="M10.68 16.09c-.388 0-.7-.331-.7-.747 0-.414.312-.75.7-.75.387 0 .7.335.7.75 0 .416-.313.748-.7.748zm0-2.473c-.895 0-1.616.772-1.616 1.726 0 .953.72 1.726 1.615 1.726.894 0 1.614-.773 1.614-1.726 0-.954-.72-1.726-1.614-1.726zm5.935-4.028c0 .343-.26.626-.586.626h-2.04c-.324 0-.587-.283-.587-.626V8.547c0-.343.263-.627.586-.627h2.04c.327 0 .587.284.587.627v1.042zm-5.834.004c0 .344-.263.627-.587.627h-4.42c-.324 0-.588-.283-.588-.627V8.547c0-.343.264-.627.588-.627h4.42c.324 0 .587.284.587.627v1.046zm9.067 4.969h-1.48l-.004-5.522c0-1.68-1.277-3.04-2.847-3.04H5.843C4.273 6 3 7.36 3 9.04l.004 3.912c0 1.235.938 2.24 2.097 2.24h3.342c.072-1.26 1.041-2.256 2.235-2.256 1.195 0 2.164.995 2.237 2.25h7.51c0-.34-.257-.624-.577-.624z"></path></g></svg></span></span></a></li></ul></div></div><div class="searchEngineFields selectFields"><div><form id="occasForm" name="form" class="multiSelectFieldContentContainer withSubmitOffset"><div class="promoneuveSelectField"><span class="cbm--onlyPhone"><button class="cbm-btn--4 cbm--active">Occasion</button><button class="cbm-btn--4 " data-xtclick="{&quot;label&quot;:&quot;Promoneuve_HP_Radio&quot;,&quot;typeClick&quot;:&quot;action&quot;}">Neuf</button></span><div class="cbm-select--1 promoneuveSelectField cbm--hiddenPhone"><select><option selected="" value="0">Occasion</option><option value="1">Neuf</option></select></div></div><div class="brandSelect"><div class="multiSelectContainer"><div class="cbm-select--1 floatL "><a>Marque</a></div></div></div><div class="modelSelect"><div class="multiSelectContainer"><div class="cbm-select--1 floatL "><a>Modèle</a></div></div></div><div class="maxPriceInput cbm-input--1 number "><span class="inputUnits">€</span><input type="number" value="" placeholder="Prix max" pattern="\d*" max="9999999"/><div class="formatted"></div></div><div class="energieSelect"><div class="multiSelectContainer"><div class="cbm-select--1 floatL "><a>Énergie</a></div></div></div><div class="covidSelect"><div class="multiSelectContainer"><div class="cbm-select--1 floatL "><a>Covid-19</a></div></div></div><div class="regionSelect"><div><div class="multiSelectContainer"><div class="cbm-select--1 floatL "><a>Régions</a></div></div></div></div><a href="javascript:" data-xtclick="{&quot;label&quot;:&quot;Home::PlusCriteres&quot;, &quot;typeClick&quot;:&quot;navigation&quot;}" title="Plus de critères pour trouver un véhicule d occasion" class="advancedSearch cbm--onlyPhone" rel="nofollow">Plus de critères</a><div id="Valider"><input type="button" value="343 819 annonces" class="cbm-btn--1 b0" rel="nofollow" data-xtclick="{&quot;label&quot;:&quot;Recherche::Bouton&quot;, &quot;typeClick&quot;:&quot;navigation&quot;}"/></div></form></div></div></div><div class="savedSearch"><div><div class="savedSearchHeader">MES RECHERCHES ENREGISTRÉES</div><span><li class="cursorPointer underline">Connectez-vous</li></span></div></div></div></div></div><script>window.__PRELOADED_STATE_LISTING__ = {"boostVo":{"hits":[],"gsBySiret":{},"pending":false},"proPulse":{"hits":null,"offersByCustomerReference":{},"pending":false,"finished":false},"geolocation":{"coords":null,"zipcode":null,"geolocationError":null,"source":null},"promoneuve":{"display":false,"brandsModels":null},"search":{"aggs":{"age":[],"customerFamilyCode":[],"allWarranty":[],"networkWarranty":[],"location.visitPlace.region":[{"key":"FR-ARA","count":41383},{"key":"FR-BFC","count":15298},{"key":"FR-BRE","count":18952},{"key":"FR-COR","count":443},{"key":"FR-CVL","count":16783},{"key":"FR-GES","count":30734},{"key":"FR-HDF","count":22913},{"key":"FR-IDF","count":61565},{"key":"FR-NAQ","count":33398},{"key":"FR-NOR","count":16047},{"key":"FR-OCC","count":33487},{"key":"FR-PAC","count":30025},{"key":"FR-PDL","count":22791}],"picturesCount":[],"publicationOptions":[],"reclaimVAT":[],"vehicle.autocompleteCommercialNames":[],"vehicle.autocompleteOptions":[],"vehicle.category":[],"vehicle.consumption":[],"vehicle.conversionBonusEligibility":[],"vehicle.critAir.max":[],"vehicle.doors":[],"vehicle.energy":[{"key":"BICARBURATION_ESSENCE_BIOETHANOL","count":162},{"key":"BICARBURATION_ESSENCE_GNV","count":40},{"key":"BIO","count":16},{"key":"BIO_ESSENCE_GPL","count":619},{"key":"DIESEL","count":171654},{"key":"ELECTRIC","count":7816},{"key":"ESSENCE","count":141961},{"key":"HYBRID","count":21551},{"key":"HYBRID_DIESEL_ELECTRIC","count":998},{"key":"HYBRID_ESSENCE_ELECTRIC","count":14092},{"key":"NOT_PLUGIN_HYBRID","count":15090},{"key":"OTHER","count":56},{"key":"PLUGIN_HYBRID","count":6461},{"key":"PLUGIN_HYBRID_DIESEL_ELECTRIC","count":248},{"key":"PLUGIN_HYBRID_ESSENCE_ELECTRIC","count":6213}],"vehicle.externalColor":[],"vehicle.firstHand":[],"vehicle.fourWheelDrive":[],"vehicle.gearbox":[],"goodDealBadge":[],"vehicle.make":[{"key":"ABARTH","count":469,"agg":[{"key":"124","count":5},{"key":"500","count":461},{"key":"GRANDE PUNTO","count":1},{"key":"PUNTO EVO","count":1},{"key":"SCORPION","count":1}]},{"key":"AC","count":13,"agg":[{"key":"COBRA","count":12},{"key":"ROADSTER ACE","count":1}]},{"key":"AIXAM","count":78,"agg":[{"key":"400","count":9},{"key":"500","count":4},{"key":"A721","count":4},{"key":"A741","count":1},{"key":"CITY","count":23},{"key":"COUPE","count":14},{"key":"CROSSLINE","count":7},{"key":"CROSSOVER","count":6},{"key":"D-TRUCK","count":4},{"key":"GTO","count":4},{"key":"MINAUTO","count":1},{"key":"SCOUTY","count":1}]},{"key":"ALFA ROMEO","count":1920,"agg":[{"key":"145","count":1},{"key":"146","count":1},{"key":"147","count":34},{"key":"155","count":2},{"key":"156","count":14},{"key":"159","count":42},{"key":"166","count":1},{"key":"1300","count":4},{"key":"2000","count":2},{"key":"2600","count":3},{"key":"4C","count":7},{"key":"8C","count":3},{"key":"ALFETTA","count":6},{"key":"BRERA","count":14},{"key":"GIULIA","count":441},{"key":"GIULIETTA","count":538},{"key":"GT","count":22},{"key":"GTV","count":6},{"key":"MITO","count":257},{"key":"MONTREAL","count":4},{"key":"SPIDER","count":32},{"key":"STELVIO","count":486}]},{"key":"ALPINA","count":16,"agg":[{"key":"B3","count":3},{"key":"B4","count":1},{"key":"B5","count":4},{"key":"D3","count":2},{"key":"D4","count":2},{"key":"D5","count":2},{"key":"XD3","count":2}]},{"key":"ALPINE","count":80,"agg":[{"key":"A110","count":67},{"key":"A310","count":6},{"key":"A610","count":3},{"key":"GTA","count":4}]},{"key":"APAL","count":4,"agg":[{"key":"356","count":1},{"key":"COUPE","count":3}]},{"key":"ARIEL","count":1,"agg":[{"key":"ATOM","count":1}]},{"key":"ASTON MARTIN","count":237,"agg":[{"key":"CYGNET","count":2},{"key":"DB11","count":18},{"key":"DB6","count":1},{"key":"DB7","count":12},{"key":"DB9","count":22},{"key":"DBS","count":19},{"key":"DBX","count":7},{"key":"LAGONDA","count":1},{"key":"RAPIDE","count":17},{"key":"V12 VANTAGE","count":20},{"key":"V8 VANTAGE","count":64},{"key":"V8","count":1},{"key":"VANQUISH","count":41},{"key":"VANTAGE GT8","count":1},{"key":"VANTAGE","count":5},{"key":"VIRAGE","count":6}]},{"key":"AUDI","count":18457,"agg":[{"key":"80","count":7},{"key":"100","count":5},{"key":"A1","count":2218},{"key":"A2","count":11},{"key":"A3","count":4051},{"key":"A4","count":1943},{"key":"A4 ALLROAD","count":219},{"key":"A5","count":1310},{"key":"A6 ALLROAD","count":165},{"key":"A6","count":753},{"key":"A7","count":223},{"key":"A8","count":134},{"key":"COUPE GT","count":2},{"key":"COUPE","count":3},{"key":"E-TRON SPORTBACK","count":59},{"key":"E-TRON","count":142},{"key":"Q2","count":1335},{"key":"Q3","count":1862},{"key":"Q5","count":1474},{"key":"Q7","count":555},{"key":"Q8","count":92},{"key":"R8","count":112},{"key":"RS Q3","count":40},{"key":"RS Q8","count":9},{"key":"RS3","count":114},{"key":"RS4","count":95},{"key":"RS5","count":76},{"key":"RS6","count":92},{"key":"RS7","count":16},{"key":"S1","count":33},{"key":"S3","count":242},{"key":"S4","count":76},{"key":"S5","count":103},{"key":"S6","count":28},{"key":"S7","count":18},{"key":"S8","count":15},{"key":"SQ2","count":13},{"key":"SQ5","count":211},{"key":"SQ7","count":76},{"key":"SQ8","count":15},{"key":"TT RS","count":40},{"key":"TT","count":392},{"key":"TTS","count":78}]},{"key":"AUSTIN HEALEY","count":14,"agg":[{"key":"100","count":1},{"key":"3000","count":10},{"key":"SPRITE","count":3}]},{"key":"AUSTIN","count":30,"agg":[{"key":"1000","count":1},{"key":"MINI","count":21},{"key":"MINI-MOKE","count":8}]},{"key":"AUTO UNION","count":1,"agg":[{"key":"1000","count":1}]},{"key":"AUTOBIANCHI","count":8,"agg":[{"key":"500","count":1},{"key":"A112","count":4},{"key":"BIANCHINA","count":3}]},{"key":"AUVERLAND","count":1,"agg":[{"key":"A3","count":1}]},{"key":"BELLIER","count":2,"agg":[{"key":"B8","count":2}]},{"key":"BENTLEY","count":216,"agg":[{"key":"ARNAGE","count":6},{"key":"AZURE","count":3},{"key":"BENTAYGA","count":31},{"key":"BROOKLANDS","count":1},{"key":"CONTINENTAL","count":149},{"key":"FLYING SPUR","count":13},{"key":"MULSANNE","count":8},{"key":"NEW GTC","count":1},{"key":"S3","count":1},{"key":"TURBO R","count":3}]},{"key":"BMW","count":19576,"agg":[{"key":"1800","count":1},{"key":"2000","count":3},{"key":"2002","count":4},{"key":"2800","count":1},{"key":"3.0","count":3},{"key":"I3","count":556},{"key":"I3S","count":16},{"key":"I8","count":35},{"key":"M1","count":1},{"key":"SERIE 1","count":3195},{"key":"SERIE 2","count":2669},{"key":"SERIE 3","count":2516},{"key":"SERIE 3 GT","count":217},{"key":"SERIE 4","count":1189},{"key":"SERIE 5","count":1233},{"key":"SERIE 5 GT","count":45},{"key":"SERIE 6","count":276},{"key":"SERIE 7","count":246},{"key":"SERIE 8 GRAN COUPE","count":27},{"key":"SERIE 8","count":71},{"key":"X1","count":2475},{"key":"X2","count":575},{"key":"X3","count":1442},{"key":"X4","count":818},{"key":"X5","count":1117},{"key":"X6","count":523},{"key":"X7","count":45},{"key":"Z1","count":10},{"key":"Z3","count":73},{"key":"Z4","count":187},{"key":"Z8","count":7}]},{"key":"BOLLORE","count":19,"agg":[{"key":"BLUECAR","count":15},{"key":"BLUESUMMER","count":3},{"key":"BLUEUTILITY","count":1}]},{"key":"BUGATTI","count":1,"agg":[{"key":"CHIRON","count":1}]},{"key":"BUICK","count":7,"agg":[{"key":"ELECTRA","count":1},{"key":"PARK AVENUE","count":1},{"key":"REGAL","count":1},{"key":"RIVIERA","count":2},{"key":"ROADMASTER","count":1},{"key":"WILDCAT","count":1}]},{"key":"CADILLAC","count":57,"agg":[{"key":"BLS","count":2},{"key":"BROUGHAM","count":1},{"key":"COUPE DEVILLE","count":1},{"key":"CT6","count":1},{"key":"CTS-V","count":1},{"key":"CTS","count":5},{"key":"DEVILLE","count":3},{"key":"DTS","count":1},{"key":"ELDORADO","count":2},{"key":"ESCALADE","count":19},{"key":"FLEETWOOD","count":2},{"key":"SERIE 62","count":4},{"key":"SERIE 70","count":1},{"key":"SEVILLE","count":5},{"key":"SRX","count":6},{"key":"XT4","count":1},{"key":"XT5","count":2}]},{"key":"CASALINI","count":6,"agg":[{"key":"M20","count":5},{"key":"WRS","count":1}]},{"key":"CATERHAM","count":9,"agg":[{"key":"SUPER SEVEN","count":9}]},{"key":"CHATENET","count":24,"agg":[{"key":"CH 26","count":9},{"key":"CH 40","count":7},{"key":"CH 46","count":8}]},{"key":"CHEVROLET","count":534,"agg":[{"key":"3100","count":1},{"key":"APACHE","count":3},{"key":"AVALANCHE","count":1},{"key":"AVEO","count":41},{"key":"BEL AIR","count":1},{"key":"C20","count":3},{"key":"C30","count":1},{"key":"CAMARO","count":76},{"key":"CAPRICE","count":2},{"key":"CAPTIVA","count":52},{"key":"CHEVELLE","count":2},{"key":"CHEVY","count":1},{"key":"CORVAIR","count":2},{"key":"CORVETTE","count":126},{"key":"CRUZE","count":41},{"key":"EL CAMINO","count":3},{"key":"EPICA","count":1},{"key":"FLEETLINE","count":1},{"key":"IMPALA","count":6},{"key":"KALOS","count":3},{"key":"LACETTI","count":3},{"key":"MALIBU","count":3},{"key":"MATIZ","count":15},{"key":"MONTE CARLO","count":2},{"key":"ORLANDO","count":29},{"key":"REZZO","count":3},{"key":"SILVERADO","count":11},{"key":"SPARK","count":63},{"key":"SSR","count":2},{"key":"SUBURBAN","count":3},{"key":"TAHOE","count":2},{"key":"TRAILBLAZER","count":1},{"key":"TRAX","count":24},{"key":"VAN EXPRESS","count":1},{"key":"VOLT","count":5}]},{"key":"CHRYSLER","count":105,"agg":[{"key":"300 B","count":1},{"key":"300 C","count":20},{"key":"300 M","count":1},{"key":"CROSSFIRE","count":16},{"key":"GRAND VOYAGER","count":10},{"key":"LEBARON","count":1},{"key":"PACIFICA","count":4},{"key":"PROWLER","count":1},{"key":"PT CRUISER","count":28},{"key":"SEBRING","count":11},{"key":"STRATUS","count":2},{"key":"VIPER","count":2},{"key":"VOYAGER","count":8}]},{"key":"CITROEN","count":31925,"agg":[{"key":"2CV","count":42},{"key":"ACADIANE","count":1},{"key":"AMI","count":3},{"key":"AX","count":3},{"key":"BERLINGO","count":2190},{"key":"BX","count":4},{"key":"C-CROSSER","count":33},{"key":"C-ELYSEE","count":112},{"key":"C-ZERO","count":163},{"key":"C1","count":1706},{"key":"C15","count":4},{"key":"C2","count":150},{"key":"C3","count":8436},{"key":"C3 AIRCROSS","count":3697},{"key":"C3 PICASSO","count":536},{"key":"C3 PLURIEL","count":32},{"key":"C4","count":1826},{"key":"C4 AIRCROSS","count":325},{"key":"C4 CACTUS","count":2611},{"key":"C4 PICASSO","count":2115},{"key":"C4 SPACETOURER","count":454},{"key":"C5 AIRCROSS","count":2760},{"key":"C5","count":536},{"key":"C6","count":38},{"key":"C8","count":47},{"key":"CX","count":3},{"key":"DS3","count":601},{"key":"DS4","count":244},{"key":"DS5","count":202},{"key":"DS","count":10},{"key":"DYANE","count":3},{"key":"E-MEHARI","count":36},{"key":"EVASION","count":1},{"key":"GRAND C4 PICASSO","count":1040},{"key":"GRAND C4 SPACETOURER","count":540},{"key":"GSA","count":2},{"key":"ID","count":2},{"key":"JUMPER","count":336},{"key":"JUMPY","count":558},{"key":"MEHARI","count":17},{"key":"NEMO","count":109},{"key":"PICASSO","count":93},{"key":"SAXO","count":39},{"key":"SM","count":12},{"key":"SPACETOURER","count":189},{"key":"TRACTION","count":6},{"key":"VISA","count":3},{"key":"XANTIA","count":10},{"key":"XM","count":5},{"key":"XSARA","count":34},{"key":"ZX","count":6}]},{"key":"CUPRA","count":52,"agg":[{"key":"ATECA","count":34},{"key":"FORMENTOR","count":6},{"key":"LEON","count":12}]},{"key":"DACIA","count":6658,"agg":[{"key":"DOKKER","count":412},{"key":"DUSTER","count":2840},{"key":"LODGY","count":426},{"key":"LOGAN","count":400},{"key":"SANDERO","count":2580}]},{"key":"DAEWOO","count":7,"agg":[{"key":"KORANDO","count":1},{"key":"LACETTI","count":1},{"key":"MATIZ","count":4},{"key":"REZZO","count":1}]},{"key":"DAF","count":1,"agg":[{"key":"FA LF","count":1}]},{"key":"DAIHATSU","count":11,"agg":[{"key":"COPEN","count":3},{"key":"CUORE","count":1},{"key":"MATERIA","count":1},{"key":"SIRION","count":2},{"key":"TERIOS","count":3},{"key":"TREVIS","count":1}]},{"key":"DALLARA","count":2,"agg":[{"key":"STRADALE","count":2}]},{"key":"DANGEL","count":2,"agg":[{"key":"BERLINGO","count":1},{"key":"SCUDO","count":1}]},{"key":"DATSUN","count":1,"agg":[{"key":"FAIRLADY","count":1}]},{"key":"DE SOTO","count":1,"agg":[{"key":"CUSTOM","count":1}]},{"key":"DE TOMASO","count":4,"agg":[{"key":"MANGUSTA","count":2},{"key":"PANTERA","count":2}]},{"key":"DEVINCI","count":3,"agg":[{"key":"DB 718","count":2},{"key":"DB 719","count":1}]},{"key":"DODGE","count":361,"agg":[{"key":"AVENGER","count":2},{"key":"CALIBER","count":14},{"key":"CHALLENGER","count":43},{"key":"CHARGER","count":8},{"key":"D24","count":1},{"key":"DURANGO","count":11},{"key":"GRAND CARAVAN","count":1},{"key":"JOURNEY","count":4},{"key":"MAGNUM","count":1},{"key":"NITRO","count":10},{"key":"RAM","count":254},{"key":"RAMCHARGER","count":1},{"key":"VIPER","count":11}]},{"key":"DONKERVOORT","count":5,"agg":[{"key":"D8","count":4},{"key":"S8","count":1}]},{"key":"DS","count":4113,"agg":[{"key":"DS 3","count":949},{"key":"DS 3 CROSSBACK","count":1239},{"key":"DS 4","count":465},{"key":"DS 4 CROSSBACK","count":126},{"key":"DS 5","count":326},{"key":"DS 7 CROSSBACK","count":1008}]},{"key":"DUE","count":1,"agg":[{"key":"FIRST","count":1}]},{"key":"EMBUGGY","count":2,"agg":[{"key":"VINTAGE","count":2}]},{"key":"ESTRIMA","count":1,"agg":[{"key":"BIRO","count":1}]},{"key":"EXCALIBUR","count":4,"agg":[{"key":"PHAETON","count":3},{"key":"SERIE 4","count":1}]},{"key":"FERRARI","count":768,"agg":[{"key":"208","count":3},{"key":"250","count":2},{"key":"308","count":22},{"key":"328","count":12},{"key":"330","count":2},{"key":"348","count":20},{"key":"360","count":48},{"key":"365","count":2},{"key":"400","count":3},{"key":"456","count":16},{"key":"458","count":61},{"key":"488","count":94},{"key":"512","count":9},{"key":"550","count":15},{"key":"575","count":23},{"key":"599","count":43},{"key":"612","count":21},{"key":"812","count":32},{"key":"512 BB","count":11},{"key":"812 GTS","count":3},{"key":"812 SUPERFAST","count":1},{"key":"CALIFORNIA","count":60},{"key":"DINO","count":3},{"key":"F12","count":18},{"key":"F355","count":29},{"key":"F40","count":1},{"key":"F430","count":90},{"key":"F8 TRIBUTO","count":14},{"key":"FF","count":27},{"key":"GTC4","count":6},{"key":"GTC4LUSSO","count":18},{"key":"MONDIAL","count":12},{"key":"PORTOFINO","count":24},{"key":"ROMA","count":2},{"key":"TESTAROSSA","count":21}]},{"key":"FIAT","count":11035,"agg":[{"key":"124","count":19},{"key":"126","count":1},{"key":"130","count":1},{"key":"131","count":1},{"key":"500","count":4790},{"key":"600","count":3},{"key":"1100","count":1},{"key":"500 E","count":1},{"key":"500 L","count":399},{"key":"500 X","count":1994},{"key":"BARCHETTA","count":3},{"key":"BRAVA","count":1},{"key":"BRAVO","count":12},{"key":"CINQUECENTO","count":2},{"key":"COUPE","count":4},{"key":"CROMA","count":10},{"key":"DINO","count":4},{"key":"DOBLO","count":64},{"key":"DOBLO CARGO","count":221},{"key":"DUCATO","count":467},{"key":"FIORINO","count":81},{"key":"FREEMONT","count":18},{"key":"FULLBACK","count":11},{"key":"GRANDE PUNTO","count":50},{"key":"IDEA","count":5},{"key":"MAREA","count":1},{"key":"MULTIPLA","count":2},{"key":"PALIO","count":1},{"key":"PANDA","count":641},{"key":"PUNTO","count":202},{"key":"PUNTO EVO","count":40},{"key":"QUBO","count":46},{"key":"SCUDO","count":53},{"key":"SEDICI","count":7},{"key":"SEICENTO","count":5},{"key":"STILO","count":5},{"key":"STRADA","count":1},{"key":"TALENTO","count":187},{"key":"TIPO","count":1675},{"key":"ULYSSE","count":3},{"key":"UNO","count":1},{"key":"X1\u002F9","count":2}]},{"key":"FIBERFAB","count":1,"agg":[{"key":"BONITO FT","count":1}]},{"key":"FISKER","count":4,"agg":[{"key":"KARMA","count":4}]},{"key":"FORD","count":11737,"agg":[{"key":"A","count":3},{"key":"B-MAX","count":337},{"key":"B","count":1},{"key":"BRONCO","count":1},{"key":"C-MAX","count":933},{"key":"COUGAR","count":3},{"key":"COUNTRY","count":1},{"key":"COURRIER","count":2},{"key":"CROWN","count":1},{"key":"ECONOLINE","count":1},{"key":"ECOSPORT","count":1102},{"key":"EDGE","count":104},{"key":"ESCORT","count":11},{"key":"EXPEDITION","count":1},{"key":"EXPLORER","count":24},{"key":"F 100","count":1},{"key":"F100","count":1},{"key":"F150","count":121},{"key":"F350","count":1},{"key":"FIESTA","count":2323},{"key":"FOCUS","count":1472},{"key":"FOCUS C-MAX","count":37},{"key":"FUSION","count":42},{"key":"GALAXIE","count":1},{"key":"GALAXY","count":147},{"key":"GRAND C-MAX","count":281},{"key":"GRAND TOURNEO CONNECT","count":32},{"key":"GT","count":1},{"key":"HOT ROD","count":1},{"key":"KA+","count":153},{"key":"KA","count":177},{"key":"KUGA","count":1856},{"key":"MAVERICK","count":1},{"key":"MONDEO","count":522},{"key":"MUSTANG","count":360},{"key":"PROBE","count":2},{"key":"PUMA","count":477},{"key":"RANGER","count":229},{"key":"S-MAX","count":284},{"key":"TAURUS","count":1},{"key":"THUNDERBIRD","count":10},{"key":"TORINO","count":1},{"key":"TOURNEO CONNECT","count":24},{"key":"TOURNEO COURIER","count":33},{"key":"TOURNEO CUSTOM","count":25},{"key":"TRANSIT","count":214},{"key":"TRANSIT CONNECT","count":93},{"key":"TRANSIT COURIER","count":25},{"key":"TRANSIT CUSTOM","count":264}]},{"key":"FUSO","count":7,"agg":[{"key":"CANTER","count":7}]},{"key":"GMC","count":18,"agg":[{"key":"100","count":2},{"key":"ACADIA","count":3},{"key":"SIERRA","count":5},{"key":"SIERRA PICK-UP","count":6},{"key":"YUKON","count":2}]},{"key":"GOUPIL","count":2,"agg":[{"key":"G3","count":2}]},{"key":"HOMMELL","count":1,"agg":[{"key":"BERLINETTE","count":1}]},{"key":"HONDA","count":1310,"agg":[{"key":"ACCORD","count":12},{"key":"CIVIC","count":408},{"key":"CR-V","count":353},{"key":"CR-Z","count":8},{"key":"E","count":30},{"key":"FR-V","count":11},{"key":"HR-V","count":172},{"key":"INSIGHT","count":9},{"key":"INTEGRA","count":1},{"key":"JAZZ","count":290},{"key":"LEGEND","count":2},{"key":"NSX","count":7},{"key":"PRELUDE","count":1},{"key":"S2000","count":4},{"key":"S800","count":1},{"key":"STREAM","count":1}]},{"key":"HOTCHKISS","count":1,"agg":[{"key":"617","count":1}]},{"key":"HUDSON","count":1,"agg":[{"key":"COMMODORE","count":1}]},{"key":"HUMMER","count":12,"agg":[{"key":"H1","count":2},{"key":"H2","count":7},{"key":"H3","count":3}]},{"key":"HYUNDAI","count":4494,"agg":[{"key":"ACCENT","count":1},{"key":"ATOS PRIME","count":1},{"key":"ATOS","count":3},{"key":"AZERA","count":1},{"key":"COUPE","count":10},{"key":"GALLOPER","count":1},{"key":"GENESIS","count":3},{"key":"GETZ","count":22},{"key":"H1 VAN","count":5},{"key":"I10","count":435},{"key":"I20","count":766},{"key":"I30","count":477},{"key":"I40","count":70},{"key":"IONIQ","count":461},{"key":"IX20","count":99},{"key":"IX35","count":265},{"key":"IX55","count":1},{"key":"KONA","count":800},{"key":"MATRIX","count":6},{"key":"SANTA FE","count":111},{"key":"SONATA","count":2},{"key":"TERRACAN","count":5},{"key":"TRAJET","count":3},{"key":"TUCSON","count":937},{"key":"VELOSTER","count":9}]},{"key":"INFINITI","count":234,"agg":[{"key":"EX","count":5},{"key":"FX","count":20},{"key":"G","count":3},{"key":"M","count":3},{"key":"Q30","count":93},{"key":"Q50","count":52},{"key":"Q60","count":2},{"key":"Q70","count":12},{"key":"QX30","count":14},{"key":"QX50","count":5},{"key":"QX56","count":1},{"key":"QX70 S","count":1},{"key":"QX70","count":23}]},{"key":"ISUZU","count":76,"agg":[{"key":"D-MAX","count":73},{"key":"M21","count":2},{"key":"SERIE N","count":1}]},{"key":"IVECO","count":198,"agg":[{"key":"DAILY","count":195},{"key":"DAILY CHASSIS CAB","count":2},{"key":"STRALIS","count":1}]},{"key":"JAGUAR","count":1560,"agg":[{"key":"240","count":1},{"key":"420","count":1},{"key":"2.4","count":2},{"key":"3.8","count":3},{"key":"DAIMLER","count":7},{"key":"E-PACE","count":159},{"key":"F-PACE","count":379},{"key":"F-TYPE","count":120},{"key":"I-PACE","count":111},{"key":"MK II","count":9},{"key":"ROADSTER XK","count":1},{"key":"S-TYPE","count":39},{"key":"TYPE C","count":1},{"key":"TYPE E","count":31},{"key":"X-TYPE","count":25},{"key":"XE","count":204},{"key":"XF","count":270},{"key":"XJ12","count":5},{"key":"XJ6","count":7},{"key":"XJ8","count":10},{"key":"XJ","count":66},{"key":"XJR","count":5},{"key":"XJS-C","count":5},{"key":"XJS","count":10},{"key":"XK","count":33},{"key":"XK8","count":31},{"key":"XKR","count":25}]},{"key":"JDM SIMPA","count":3,"agg":[{"key":"ALOES","count":1},{"key":"TITANE","count":1},{"key":"XHEOS","count":1}]},{"key":"JEEP","count":2474,"agg":[{"key":"CHEROKEE","count":129},{"key":"CJ5","count":1},{"key":"CJ7","count":3},{"key":"COMMANDER","count":3},{"key":"COMPASS","count":676},{"key":"FORD","count":1},{"key":"GLADIATOR","count":32},{"key":"GRAND CHEROKEE","count":157},{"key":"GRAND WAGONEER","count":1},{"key":"PATRIOT","count":3},{"key":"RENEGADE","count":1215},{"key":"WILLYS","count":1},{"key":"WRANGLER","count":252}]},{"key":"KIA","count":4344,"agg":[{"key":"CARENS","count":184},{"key":"CARNIVAL","count":3},{"key":"CEE D","count":252},{"key":"CEED","count":206},{"key":"CERATO","count":2},{"key":"E-NIRO","count":77},{"key":"E-SOUL","count":51},{"key":"MAGENTIS","count":3},{"key":"NIRO","count":420},{"key":"OPIRUS","count":1},{"key":"OPTIMA","count":43},{"key":"PICANTO","count":533},{"key":"PRO CEE D","count":49},{"key":"PROCEED","count":78},{"key":"RIO","count":449},{"key":"SORENTO","count":40},{"key":"SOUL","count":135},{"key":"SPORTAGE","count":1023},{"key":"STINGER","count":17},{"key":"STONIC","count":368},{"key":"VENGA","count":144},{"key":"XCEED","count":266}]},{"key":"KTM","count":4,"agg":[{"key":"X-BOW","count":4}]},{"key":"LADA","count":3,"agg":[{"key":"2107","count":1},{"key":"NIVA","count":2}]},{"key":"LAMBORGHINI","count":151,"agg":[{"key":"AVENTADOR","count":28},{"key":"COUNTACH","count":2},{"key":"DIABLO","count":1},{"key":"ESPADA","count":1},{"key":"GALLARDO","count":38},{"key":"HURACAN","count":49},{"key":"JARAMA","count":1},{"key":"MURCIELAGO","count":10},{"key":"URUS","count":21}]},{"key":"LANCIA","count":138,"agg":[{"key":"2000","count":1},{"key":"BETA","count":2},{"key":"DEDRA","count":1},{"key":"DELTA","count":23},{"key":"FLAVIA","count":4},{"key":"FULVIA","count":5},{"key":"GAMMA","count":1},{"key":"KAPPA","count":1},{"key":"MUSA","count":17},{"key":"PHEDRA","count":3},{"key":"THEMA","count":1},{"key":"THESIS","count":1},{"key":"VOYAGER","count":17},{"key":"YPSILON","count":61}]},{"key":"LAND ROVER","count":3101,"agg":[{"key":"DEFENDER","count":184},{"key":"DISCOVERY SPORT","count":487},{"key":"DISCOVERY","count":97},{"key":"FREELANDER","count":52},{"key":"LAND","count":1},{"key":"RANGE ROVER EVOQUE","count":1038},{"key":"RANGE ROVER SPORT","count":696},{"key":"RANGE ROVER VELAR","count":256},{"key":"RANGE ROVER","count":290}]},{"key":"LEXUS","count":1793,"agg":[{"key":"CT","count":282},{"key":"ES","count":74},{"key":"GS","count":23},{"key":"IS","count":211},{"key":"LC","count":27},{"key":"LS","count":15},{"key":"NX","count":409},{"key":"RC","count":53},{"key":"RX","count":334},{"key":"SC","count":10},{"key":"UX","count":355}]},{"key":"LIGIER","count":41,"agg":[{"key":"AMBRA","count":1},{"key":"IXO","count":4},{"key":"JS","count":8},{"key":"JS50","count":12},{"key":"JS50L","count":12},{"key":"OPTIMAX","count":1},{"key":"X-TOO R","count":3}]},{"key":"LINCOLN","count":12,"agg":[{"key":"AVIATOR","count":1},{"key":"CONTINENTAL","count":2},{"key":"MARK VIII","count":1},{"key":"NAVIGATOR","count":3},{"key":"TOWN CAR","count":5}]},{"key":"LONDON TAXI COMPANY","count":1,"agg":[{"key":"TX4","count":1}]},{"key":"LOTUS","count":102,"agg":[{"key":"2 ELEVEN","count":1},{"key":"ELAN","count":2},{"key":"ELISE","count":40},{"key":"ELITE","count":1},{"key":"ESPRIT","count":1},{"key":"EUROPA","count":2},{"key":"EVORA","count":14},{"key":"EXCEL","count":1},{"key":"EXIGE","count":40}]},{"key":"MAN","count":2,"agg":[{"key":"TGE","count":2}]},{"key":"MARTIN","count":1,"agg":[{"key":"AC COBRA","count":1}]},{"key":"MASERATI","count":523,"agg":[{"key":"3200 GT","count":19},{"key":"BITURBO","count":2},{"key":"BORA","count":1},{"key":"COUPE","count":14},{"key":"GHIBLI","count":155},{"key":"GRANCABRIO","count":9},{"key":"GRANSPORT","count":15},{"key":"GRANTURISMO","count":77},{"key":"LEVANTE","count":147},{"key":"MERAK","count":1},{"key":"MEXICO","count":1},{"key":"QUATTROPORTE","count":75},{"key":"SPYDER","count":7}]},{"key":"MATRA","count":6,"agg":[{"key":"BAGHEERA","count":2},{"key":"MURENA","count":4}]},{"key":"MAYBACH","count":2,"agg":[{"key":"57 BERLINE","count":1},{"key":"62 BERLINE","count":1}]},{"key":"MAZDA","count":2068,"agg":[{"key":"2","count":160},{"key":"3","count":327},{"key":"5","count":32},{"key":"6","count":141},{"key":"323","count":3},{"key":"CX-30","count":173},{"key":"CX-3","count":378},{"key":"CX-5","count":510},{"key":"CX-7","count":12},{"key":"DEMIO","count":1},{"key":"MX-30","count":75},{"key":"MX5","count":249},{"key":"PREMACY","count":1},{"key":"RX-7","count":1},{"key":"RX-8","count":5}]},{"key":"MCLAREN","count":68,"agg":[{"key":"540C","count":3},{"key":"570GT","count":4},{"key":"570S","count":8},{"key":"600 LT","count":3},{"key":"650 S","count":7},{"key":"675 LT","count":9},{"key":"720S","count":16},{"key":"GT","count":2},{"key":"MP4-12C","count":15},{"key":"P1","count":1}]},{"key":"MEGA","count":2,"agg":[{"key":"CLUB","count":2}]},{"key":"MERCEDES-AMG","count":135,"agg":[{"key":"GT","count":135}]},{"key":"MERCEDES","count":18602,"agg":[{"key":"180","count":1},{"key":"190","count":26},{"key":"200","count":6},{"key":"220","count":9},{"key":"230","count":6},{"key":"250","count":8},{"key":"280","count":12},{"key":"300","count":12},{"key":"320","count":2},{"key":"350","count":2},{"key":"400","count":1},{"key":"450","count":1},{"key":"500","count":6},{"key":"560","count":4},{"key":"600","count":1},{"key":"1017","count":1},{"key":"560 SL","count":1},{"key":"ACTROS","count":35},{"key":"ANTOS","count":1},{"key":"AROCS","count":1},{"key":"ATEGO","count":2},{"key":"AXOR","count":2},{"key":"CITAN","count":88},{"key":"CL","count":36},{"key":"CLA","count":1328},{"key":"CLASSE A","count":3781},{"key":"CLASSE B","count":2308},{"key":"CLASSE C","count":2444},{"key":"CLASSE CLC","count":17},{"key":"CLASSE CLS","count":302},{"key":"CLASSE E","count":1295},{"key":"CLASSE G","count":112},{"key":"CLASSE GL","count":41},{"key":"CLASSE GLK","count":79},{"key":"CLASSE M","count":209},{"key":"CLASSE R","count":37},{"key":"CLASSE S","count":347},{"key":"CLASSE V","count":250},{"key":"CLASSE X","count":23},{"key":"CLK","count":108},{"key":"EQC","count":61},{"key":"EQV","count":15},{"key":"GLA","count":1716},{"key":"GLB","count":162},{"key":"GLC","count":1257},{"key":"GLC COUPE","count":492},{"key":"GLE","count":319},{"key":"GLE COUPE","count":179},{"key":"GLS","count":41},{"key":"MARCO POLO","count":16},{"key":"SL","count":178},{"key":"SLC","count":35},{"key":"SLK","count":102},{"key":"SLR","count":7},{"key":"SLS","count":19},{"key":"SPRINTER","count":491},{"key":"VIANO","count":50},{"key":"VITO","count":516},{"key":"VITO FG","count":1}]},{"key":"MERCURY","count":3,"agg":[{"key":"M100","count":1},{"key":"MARAUDER","count":1},{"key":"PARK LANE","count":1}]},{"key":"MEYERS MANX","count":1,"agg":[{"key":"MANX","count":1}]},{"key":"MG","count":69,"agg":[{"key":"A","count":8},{"key":"B","count":37},{"key":"F","count":6},{"key":"MG ZS","count":1},{"key":"MIDGET","count":4},{"key":"TD","count":2},{"key":"TF","count":4},{"key":"ZR","count":1},{"key":"ZS EV","count":4},{"key":"ZS","count":1},{"key":"ZT","count":1}]},{"key":"MIA ELECTRIC","count":4,"agg":[{"key":"MIA","count":4}]},{"key":"MICROCAR","count":32,"agg":[{"key":"DUE6","count":1},{"key":"DUE","count":7},{"key":"M-PRO","count":1},{"key":"M.GO","count":18},{"key":"M8","count":1},{"key":"MC2","count":2},{"key":"MGO5","count":2}]},{"key":"MINAUTO","count":4,"agg":[{"key":"CROSS","count":1},{"key":"ECO","count":3}]},{"key":"MINI","count":5570,"agg":[{"key":"COUNTRYMAN","count":1218},{"key":"MINI","count":3030},{"key":"MINI CABRIOLET","count":401},{"key":"MINI CLUBMAN","count":815},{"key":"MINI COUPE","count":32},{"key":"MINI ROADSTER","count":11},{"key":"PACEMAN","count":63}]},{"key":"MITSUBISHI","count":1142,"agg":[{"key":"3000 GT","count":3},{"key":"ASX","count":202},{"key":"CANTER","count":3},{"key":"CARISMA","count":1},{"key":"COLT","count":2},{"key":"ECLIPSE CROSS","count":63},{"key":"FUSO CANTER","count":6},{"key":"GRANDIS","count":4},{"key":"I-MIEV","count":3},{"key":"L200","count":133},{"key":"LANCER","count":5},{"key":"MONTERO","count":1},{"key":"OUTLANDER","count":414},{"key":"PAJERO PININ","count":5},{"key":"PAJERO SPORT","count":1},{"key":"PAJERO","count":43},{"key":"SPACE STAR","count":253}]},{"key":"MORGAN","count":42,"agg":[{"key":"4\u002F4","count":8},{"key":"AERO 8","count":2},{"key":"AEROMAX","count":1},{"key":"PLUS 4","count":9},{"key":"PLUS 6","count":1},{"key":"PLUS 8","count":3},{"key":"PLUS FOUR","count":9},{"key":"PLUS SIX","count":1},{"key":"ROADSTER V6","count":3},{"key":"ROADSTER","count":1},{"key":"THREEWHEELER","count":4}]},{"key":"MORRIS","count":1,"agg":[{"key":"MINI","count":1}]},{"key":"MPM MOTORS","count":5,"agg":[{"key":"ERELIS","count":3},{"key":"PS.160","count":2}]},{"key":"NISSAN","count":9561,"agg":[{"key":"100 NX","count":1},{"key":"300 ZX","count":3},{"key":"350Z","count":17},{"key":"370Z","count":18},{"key":"ALMERA TINO","count":2},{"key":"ALMERA","count":3},{"key":"ATLEON","count":1},{"key":"CABSTAR","count":11},{"key":"CUBE","count":6},{"key":"E-NV200","count":1},{"key":"EVALIA","count":24},{"key":"GT-R","count":41},{"key":"JUKE","count":1550},{"key":"LEAF","count":833},{"key":"MAXIMA","count":2},{"key":"MICRA","count":1256},{"key":"MURANO","count":19},{"key":"NAVARA","count":81},{"key":"NOTE","count":211},{"key":"NP300","count":2},{"key":"NT400","count":1},{"key":"NT400 CABSTAR","count":3},{"key":"NT500","count":2},{"key":"NV200","count":61},{"key":"NV250","count":13},{"key":"NV300","count":23},{"key":"NV300 ","count":1},{"key":"NV400","count":27},{"key":"PATHFINDER","count":13},{"key":"PATROL","count":13},{"key":"PICK UP","count":4},{"key":"PIXO","count":25},{"key":"PRIMASTAR","count":8},{"key":"PRIMERA","count":3},{"key":"PULSAR","count":206},{"key":"QASHQAI +2","count":106},{"key":"QASHQAI","count":3997},{"key":"SERENA","count":1},{"key":"SUNNY","count":1},{"key":"TERRANO","count":10},{"key":"VANETTE","count":1},{"key":"X-TRAIL","count":960}]},{"key":"NOUN ELECTRIC","count":2,"agg":[{"key":"NOSMOKE","count":2}]},{"key":"OLDSMOBILE","count":4,"agg":[{"key":"CUTLASS","count":3},{"key":"F85","count":1}]},{"key":"OPEL","count":11065,"agg":[{"key":"ADAM","count":277},{"key":"AGILA","count":40},{"key":"AMPERA","count":5},{"key":"ANTARA","count":32},{"key":"ASTRA","count":1378},{"key":"CALIBRA","count":1},{"key":"CASCADA","count":27},{"key":"COMBO","count":11},{"key":"COMBO 4 LIFE","count":40},{"key":"COMBO CARGO","count":106},{"key":"COMBO LIFE","count":16},{"key":"CORSA","count":3370},{"key":"COUPE 1900","count":1},{"key":"CROSSLAND X","count":1461},{"key":"CROSSLAND","count":28},{"key":"FRONTERA","count":3},{"key":"GRANDLAND X","count":1189},{"key":"GT","count":15},{"key":"INSIGNIA","count":523},{"key":"KADETT","count":2},{"key":"KARL","count":121},{"key":"MERIVA","count":336},{"key":"MOKKA X","count":678},{"key":"MOKKA","count":622},{"key":"MOVANO","count":97},{"key":"OMEGA","count":2},{"key":"REKORD","count":1},{"key":"SPEEDSTER","count":2},{"key":"TIGRA","count":12},{"key":"VECTRA","count":12},{"key":"VIVARO","count":271},{"key":"ZAFIRA","count":239},{"key":"ZAFIRA LIFE","count":26},{"key":"ZAFIRA TOURER","count":121}]},{"key":"PANTHER","count":2,"agg":[{"key":"KALLISTA","count":1},{"key":"LIMA","count":1}]},{"key":"PEUGEOT","count":50617,"agg":[{"key":"106","count":39},{"key":"107","count":230},{"key":"108","count":2129},{"key":"203","count":1},{"key":"205","count":38},{"key":"206","count":327},{"key":"207","count":897},{"key":"208","count":10828},{"key":"301","count":6},{"key":"304","count":1},{"key":"305","count":2},{"key":"306","count":36},{"key":"307","count":206},{"key":"308","count":9185},{"key":"309","count":6},{"key":"404","count":2},{"key":"405","count":10},{"key":"406","count":64},{"key":"407","count":177},{"key":"504","count":6},{"key":"505","count":2},{"key":"508","count":2603},{"key":"604","count":1},{"key":"605","count":3},{"key":"607","count":30},{"key":"807","count":78},{"key":"1007","count":72},{"key":"2008","count":9502},{"key":"3008","count":7594},{"key":"4007","count":14},{"key":"4008","count":59},{"key":"5008","count":2807},{"key":"206+","count":221},{"key":"207+","count":45},{"key":"508 RXH","count":118},{"key":"BIPPER","count":46},{"key":"BIPPER TEPEE","count":21},{"key":"BOXER","count":477},{"key":"EXPERT","count":464},{"key":"EXPERT TEPEE","count":32},{"key":"ION","count":160},{"key":"J7","count":1},{"key":"P4","count":2},{"key":"PARTNER","count":786},{"key":"PARTNER TEPEE","count":285},{"key":"RCZ","count":112},{"key":"RIFTER","count":713},{"key":"TRAVELLER","count":179}]},{"key":"PLYMOUTH","count":2,"agg":[{"key":"PROWLER","count":2}]},{"key":"POLESTAR","count":1,"agg":[{"key":"POLESTAR 2","count":1}]},{"key":"PONTIAC","count":13,"agg":[{"key":"CATALINA","count":1},{"key":"FIREBIRD","count":5},{"key":"FORMULA","count":1},{"key":"GRAND PRIX","count":1},{"key":"GTO","count":1},{"key":"PHOENIX","count":1},{"key":"STARCHIEF","count":1},{"key":"TRANS AM","count":2}]},{"key":"PORSCHE","count":4350,"agg":[{"key":"356","count":22},{"key":"718","count":156},{"key":"904","count":1},{"key":"911","count":1899},{"key":"912","count":4},{"key":"914","count":8},{"key":"918","count":4},{"key":"924","count":2},{"key":"928","count":15},{"key":"944","count":30},{"key":"968","count":7},{"key":"BOXSTER","count":262},{"key":"CARRERA GT","count":4},{"key":"CAYENNE","count":743},{"key":"CAYMAN","count":154},{"key":"MACAN","count":550},{"key":"PANAMERA","count":434},{"key":"TAYCAN","count":55}]},{"key":"RENAULT","count":58862,"agg":[{"key":"460","count":1},{"key":"4CV","count":4},{"key":"4L","count":1},{"key":"ALASKAN","count":13},{"key":"AVANTIME","count":19},{"key":"CAPTUR","count":9124},{"key":"CARAVELLE","count":1},{"key":"CLIO","count":15160},{"key":"DAUPHINE","count":2},{"key":"ESPACE","count":1298},{"key":"ESTAFETTE","count":2},{"key":"EXPRESS","count":3},{"key":"FLUENCE","count":11},{"key":"FREGATE","count":1},{"key":"GRAND ESPACE","count":30},{"key":"GRAND KANGOO","count":31},{"key":"GRAND MODUS","count":59},{"key":"GRAND SCENIC","count":2220},{"key":"JUVAQUATRE","count":1},{"key":"KADJAR","count":3995},{"key":"KANGOO EXPRESS","count":1247},{"key":"KANGOO","count":579},{"key":"KERAX","count":1},{"key":"KOLEOS","count":552},{"key":"LAGUNA","count":400},{"key":"LATITUDE","count":24},{"key":"MASCOTT","count":7},{"key":"MASTER","count":1128},{"key":"MAXITY","count":6},{"key":"MEGANE","count":7940},{"key":"MESSENGER","count":1},{"key":"MIDLUM","count":2},{"key":"MODUS","count":196},{"key":"ONDINE","count":1},{"key":"PREMIUM","count":5},{"key":"R10","count":1},{"key":"R11","count":2},{"key":"R12","count":1},{"key":"R15","count":1},{"key":"R16","count":1},{"key":"R19","count":4},{"key":"R21","count":3},{"key":"R25","count":6},{"key":"R4","count":16},{"key":"R5","count":9},{"key":"R6","count":1},{"key":"R8","count":3},{"key":"R9","count":1},{"key":"RODEO","count":2},{"key":"S 170","count":1},{"key":"SAFRANE","count":7},{"key":"SCENIC","count":4047},{"key":"SPIDER","count":8},{"key":"SUPER 5","count":12},{"key":"TALISMAN","count":1438},{"key":"TRAFIC","count":1163},{"key":"TWINGO","count":5200},{"key":"TWIZY","count":21},{"key":"VEL SATIS","count":22},{"key":"WIND","count":9},{"key":"ZOE","count":2818}]},{"key":"ROLLS ROYCE","count":73,"agg":[{"key":"CAMARGUE","count":2},{"key":"CORNICHE","count":7},{"key":"CULLINAN","count":2},{"key":"DAWN","count":12},{"key":"GHOST","count":15},{"key":"PHANTOM","count":10},{"key":"SILVER CLOUD","count":3},{"key":"SILVER SERAPH","count":1},{"key":"SILVER SHADOW","count":5},{"key":"SILVER SPUR","count":5},{"key":"SILVER WRAITH","count":1},{"key":"WRAITH","count":10}]},{"key":"ROVER","count":38,"agg":[{"key":"25","count":2},{"key":"45","count":2},{"key":"75","count":6},{"key":"MINI","count":21},{"key":"SERIE 100","count":2},{"key":"SERIE 200","count":2},{"key":"SERIE 400","count":1},{"key":"SERIE 600","count":2}]},{"key":"SAAB","count":62,"agg":[{"key":"96","count":1},{"key":"900","count":11},{"key":"9-3","count":39},{"key":"9-5","count":9},{"key":"9-7 X","count":1},{"key":"SONETT","count":1}]},{"key":"SANTANA","count":7,"agg":[{"key":"PS10","count":2},{"key":"S410","count":1},{"key":"S413","count":1},{"key":"SAMURAI","count":1},{"key":"VITARA","count":2}]},{"key":"SCANIA","count":3,"agg":[{"key":"124","count":1},{"key":"94D230","count":1},{"key":"R","count":1}]},{"key":"SEAT","count":5310,"agg":[{"key":"ALHAMBRA","count":84},{"key":"ALTEA FREETRACK","count":6},{"key":"ALTEA","count":112},{"key":"ARONA","count":1163},{"key":"AROSA","count":3},{"key":"ATECA","count":707},{"key":"CORDOBA","count":4},{"key":"EXEO","count":18},{"key":"IBIZA","count":1353},{"key":"LEON","count":1669},{"key":"MII","count":39},{"key":"TARRACO","count":122},{"key":"TOLEDO","count":30}]},{"key":"SHELBY","count":2,"agg":[{"key":"COBRA 289","count":1},{"key":"COBRA DAYTONA","count":1}]},{"key":"SIMCA","count":1,"agg":[{"key":"1000","count":1}]},{"key":"SKODA","count":3919,"agg":[{"key":"CITIGO","count":113},{"key":"FABIA","count":1204},{"key":"FELICIA","count":1},{"key":"KAMIQ","count":266},{"key":"KAROQ","count":294},{"key":"KODIAQ","count":239},{"key":"OCTAVIA","count":909},{"key":"RAPID","count":130},{"key":"ROOMSTER","count":25},{"key":"SCALA","count":334},{"key":"SUPERB","count":328},{"key":"YETI","count":76}]},{"key":"SMART","count":1203,"agg":[{"key":"FORFOUR","count":430},{"key":"FORTWO","count":753},{"key":"ROADSTER","count":7},{"key":"SMART","count":13}]},{"key":"SSANGYONG","count":164,"agg":[{"key":"ACTYON SPORTS","count":3},{"key":"KORANDO","count":51},{"key":"KYRON","count":8},{"key":"MUSSO","count":8},{"key":"REXTON","count":10},{"key":"RODIUS","count":7},{"key":"TIVOLI XLV","count":4},{"key":"TIVOLI","count":73}]},{"key":"SUBARU","count":194,"agg":[{"key":"B9 TRIBECA","count":2},{"key":"BRZ","count":2},{"key":"FORESTER","count":53},{"key":"IMPREZA","count":32},{"key":"LEGACY","count":2},{"key":"LEVORG","count":20},{"key":"OUTBACK","count":12},{"key":"SVX","count":2},{"key":"TREZIA","count":1},{"key":"TRIBECA","count":1},{"key":"WRX STI","count":9},{"key":"XV","count":58}]},{"key":"SUDA","count":1,"agg":[{"key":"SA 01","count":1}]},{"key":"SUZUKI","count":2050,"agg":[{"key":"ACROSS","count":25},{"key":"ALTO","count":32},{"key":"BALENO","count":42},{"key":"CARRY","count":1},{"key":"CELERIO","count":44},{"key":"GRAND VITARA","count":40},{"key":"GRAND VITARA XL-7","count":1},{"key":"IGNIS","count":206},{"key":"JIMNY","count":57},{"key":"LIANA","count":1},{"key":"SAMURAI","count":1},{"key":"SPLASH","count":27},{"key":"SWACE","count":34},{"key":"SWIFT","count":664},{"key":"SX4 S-CROSS","count":280},{"key":"SX4","count":38},{"key":"VITARA","count":549},{"key":"WAGON R+","count":8}]},{"key":"TESLA","count":147,"agg":[{"key":"MODEL 3","count":41},{"key":"MODEL S","count":78},{"key":"MODEL X","count":27},{"key":"ROADSTER","count":1}]},{"key":"TOYOTA","count":12182,"agg":[{"key":"AURIS","count":1298},{"key":"AVENSIS","count":111},{"key":"AYGO","count":1422},{"key":"C-HR","count":2455},{"key":"CAMRY","count":91},{"key":"CELICA","count":8},{"key":"COROLLA VERSO","count":58},{"key":"COROLLA","count":921},{"key":"GT86","count":17},{"key":"HI ACE","count":1},{"key":"HILUX","count":83},{"key":"IQ","count":47},{"key":"LAND CRUISER","count":62},{"key":"LAND CRUISER SW","count":9},{"key":"MIRAI","count":1},{"key":"MR","count":2},{"key":"PREVIA","count":1},{"key":"PRIUS+","count":121},{"key":"PRIUS","count":252},{"key":"PROACE","count":91},{"key":"PROACE CITY","count":61},{"key":"PROACE CITY VERSO","count":25},{"key":"PROACE VERSO","count":45},{"key":"RAV 4","count":988},{"key":"STARLET","count":2},{"key":"SUPRA","count":28},{"key":"TACOMA","count":4},{"key":"TUNDRA","count":1},{"key":"URBAN CRUISER","count":12},{"key":"VERSO","count":291},{"key":"VERSO-S","count":24},{"key":"YARIS","count":3648},{"key":"YARIS VERSO","count":2}]},{"key":"TRIUMPH","count":45,"agg":[{"key":"DOLOMITE","count":1},{"key":"GT6","count":3},{"key":"HERALD","count":1},{"key":"SPITFIRE","count":9},{"key":"TR 250","count":1},{"key":"TR 3","count":8},{"key":"TR 4","count":5},{"key":"TR 6","count":16},{"key":"TR 7","count":1}]},{"key":"TVR","count":8,"agg":[{"key":"350","count":1},{"key":"CHIMAERA","count":4},{"key":"GRIFFITH","count":1},{"key":"TUSCAN","count":2}]},{"key":"VOLKSWAGEN","count":23399,"agg":[{"key":"181","count":1},{"key":"1200","count":2},{"key":"1300","count":1},{"key":"1302","count":1},{"key":"1303","count":2},{"key":"1500","count":4},{"key":"1600","count":3},{"key":"AMAROK","count":86},{"key":"ARTEON","count":278},{"key":"BORA","count":4},{"key":"CADDY","count":421},{"key":"CALIFORNIA","count":24},{"key":"CARAVELLE","count":108},{"key":"CC","count":59},{"key":"COCCINELLE","count":232},{"key":"COMBI","count":2},{"key":"CORRADO","count":2},{"key":"CRAFTER","count":243},{"key":"EOS","count":60},{"key":"FOX","count":36},{"key":"GOLF","count":6814},{"key":"GOLF PLUS","count":113},{"key":"GOLF SPORTSVAN","count":605},{"key":"GRAND CALIFORNIA","count":2},{"key":"ID.3","count":296},{"key":"JETTA","count":30},{"key":"KARMAN GHIA","count":1},{"key":"LT","count":1},{"key":"LUPO","count":12},{"key":"MULTIVAN","count":91},{"key":"NEW BEETLE","count":57},{"key":"PASSAT CC","count":47},{"key":"PASSAT","count":1064},{"key":"PHAETON","count":7},{"key":"POLO","count":4134},{"key":"SCIROCCO","count":181},{"key":"SHARAN","count":155},{"key":"T-CROSS","count":944},{"key":"T-ROC","count":1182},{"key":"TIGUAN","count":3090},{"key":"TIGUAN ALLSPACE","count":221},{"key":"TOUAREG","count":252},{"key":"TOURAN","count":1134},{"key":"TRANSPORTER","count":443},{"key":"UP!","count":954}]},{"key":"VOLVO","count":3581,"agg":[{"key":"144","count":1},{"key":"240","count":1},{"key":"740","count":1},{"key":"850","count":3},{"key":"960","count":1},{"key":"C30","count":40},{"key":"C70","count":10},{"key":"FL","count":1},{"key":"P1800","count":2},{"key":"S40","count":18},{"key":"S60","count":147},{"key":"S70","count":1},{"key":"S80","count":14},{"key":"S90","count":64},{"key":"V40 CROSS COUNTRY","count":131},{"key":"V40","count":475},{"key":"V50","count":13},{"key":"V60 CROSS COUNTRY","count":58},{"key":"V60","count":291},{"key":"V70","count":23},{"key":"V90 CROSS COUNTRY","count":36},{"key":"V90","count":93},{"key":"XC40","count":592},{"key":"XC60","count":1166},{"key":"XC70","count":18},{"key":"XC90","count":381}]},{"key":"WESTFIELD","count":2,"agg":[{"key":"SUPER SEVEN","count":1},{"key":"ZEI","count":1}]},{"key":"WIESMANN","count":1,"agg":[{"key":"GT","count":1}]},{"key":"ZXET","count":1,"agg":[{"key":"NEIBOR","count":1}]}],"vehicle.seats":[],"vehicle.version":[],"contacts.covidMeasures":[{"key":"1","count":302527},{"key":"2","count":290727},{"key":"3","count":283258},{"key":"4","count":147805},{"key":"5","count":77258},{"key":"6","count":4902}]},"errors":{},"filters":{"vertical":"carTruck","page":1},"hits":[],"isFetching":false,"isFetchingMoreResults":false,"pageSize":16,"query":{},"queryAggs":{},"seed":"20201223155","ssResp":null,"isCbmUser":null,"total":null,"homeTotal":352237,"nextTotal":343819,"jwt":null,"promoneuve":{"display":false,"brands":{},"models":{}},"testPub":false,"isSeoUrl":false,"searchId":null,"eventCorrelationId":73527252},"session":{"salt":"PvN2RU2yXiEd4Jg9"},"device":{"deviceType":"desktop","deviceOS":null,"browserIsEdge":false},"favorites":{"favoriteIds":null,"favoriteIdsReady":false,"favoriteIdsClicked":[]},"hiddenClassifieds":{"hiddenClassifiedRefs":[]},"consultedClassifieds":{"consultedClassifiedRefs":[]},"pageMode":{"mode":"home","page":null},"jwt":{"accessToken":null,"userCorrelationId":null,"isAuthenticated":false,"isCbmUser":false,"isPro":false,"visitorId":null},"abTesting":{"abSeed":null},"covid":{"labels":{"1":{"short":"Point de vente aménagé","long":"Le vendeur applique au minimum les mesures sanitaires suivantes : distanciation des personnes sur le point de vente et port d’un masque par le vendeur. Certains vendeurs porteront des gants."},"2":{"short":"Protections pour les clients","long":"Le vendeur met à disposition de ses clients au minimum du gel hydroalcoolique. Certains vendeurs proposent également des gants."},"3":{"short":"Désinfection du véhicule","long":"Le vendeur désinfecte les zones les plus exposées du véhicule (poignées, clés, volant, levier de vitesse, frein main) entre chaque client."},"4":{"short":"Livraison à domicile","long":"Le vendeur livre le véhicule directement à domicile dans un rayon de 25 km autour du point de vente."},"5":{"short":"Essai à domicile","long":"Le vendeur se déplace avec le véhicule à domicile pour faire un essai (dans un rayon de 25 km autour du point de vente)."},"6":{"short":"Aucune Mesure","long":null}}},"notification":{"hits":[],"searchToSave":{},"emailAlert":false,"status":null,"notificationType":"search","currentHash":null},"_persist":{"version":-1,"rehydrated":true}}</script><script data-pipe>Pipe.end(4, "https://www.lacentrale.fr//static/fragment-recherche-front/home.792d1d7a.js", {"primary":true,"id":4,"range":[4,4]})</script>
+<div class="topBrandsPlusAd">
+<div id="placeAdButtonWrapper"></div>
+<div class="floatR">
+<div data-pub-appnexus="Pave1" class="cbm-appnexus__cobble"></div>
+<script data-pipe>Pipe.start(5)</script>
+<div class="cbm-tabletTvSpotBanner">
+<a href="https://www.lacentrale.fr/informations/spot" class="cbm-tabletTvSpotBanner__content">
+<h2 class="cbm-title--section">La Centrale en TV</h2>
+<div class="cbm-size--3">Ma pire angoisse...</div>
+<img src="https://www.lacentrale.fr/static/fragment-layout/spot_banner_tablet-7a841cae.jpg"/>
+</a>
+<div class="cbm-tabletTvSpotBanner__button">
+<a href="https://www.lacentrale.fr/informations/spot" class="cbm-btn--2">
+<span>Voir la pub</span>
+</a>
+</div>
+</div>
+<script data-pipe>Pipe.end(5)</script>
+</div>
+<script data-pipe>Pipe.start(6)</script><div class="TopBrandsModels responsive">
+<div class="fastAccessLine cat_auto">
+<div class="fastAccessVehicles">
+<div class="topBrands clearTablet clearPhone">
+<h2 class="cbm-title--section">Top des marques</h2>
+<ul>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Audi&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-audi.html" title="Voiture occasion Audi">
+<span>Audi</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Bmw&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-bmw.html" title="Voiture occasion Bmw">
+<span>Bmw</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Citroen&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-citroen.html" title="Voiture occasion Citroen">
+<span>Citroen</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Dacia&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-dacia.html" title="Voiture occasion Dacia">
+<span>Dacia</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Fiat&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-fiat.html" title="Voiture occasion Fiat">
+<span>Fiat</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Ford&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-ford.html" title="Voiture occasion Ford">
+<span>Ford</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Mercedes&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-mercedes.html" title="Voiture occasion Mercedes">
+<span>Mercedes</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Nissan&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-nissan.html" title="Voiture occasion Nissan">
+<span>Nissan</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Opel&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-opel.html" title="Voiture occasion Opel">
+<span>Opel</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Peugeot&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-peugeot.html" title="Voiture occasion Peugeot">
+<span>Peugeot</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Renault&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-renault.html" title="Voiture occasion Renault">
+<span>Renault</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Toyota&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-toyota.html" title="Voiture occasion Toyota">
+<span>Toyota</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::Volkswagen&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-marque-volkswagen.html" title="Voiture occasion Volkswagen">
+<span>Volkswagen</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_marques::toutes&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--4 bold pW2" href="https://www.lacentrale.fr/occasion-voiture.html" title="Tous les marques de voitures d&#x27;occasion">
+<span>Toutes les marques</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="topModels clearTablet clearPhone">
+<h2 class="cbm-title--section">Top des mod&egrave;les</h2>
+<ul>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::2008&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-peugeot-2008.html" title="Voiture occasion 2008">
+<span>2008</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::208&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-peugeot-208.html" title="Voiture occasion 208">
+<span>208</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::3008&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-peugeot-3008.html" title="Voiture occasion 3008">
+<span>3008</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::308&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-peugeot-308.html" title="Voiture occasion 308">
+<span>308</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::500&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-fiat-500.html" title="Voiture occasion 500">
+<span>500</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::A3&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-audi-a3.html" title="Voiture occasion A3">
+<span>A3</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::C3&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-citroen-c3.html" title="Voiture occasion C3">
+<span>C3</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::Captur&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-renault-captur.html" title="Voiture occasion Captur">
+<span>Captur</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::Clio&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-renault-clio.html" title="Voiture occasion Clio">
+<span>Clio</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::Golf&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-volkswagen-golf.html" title="Voiture occasion Golf">
+<span>Golf</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::Megane&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-renault-megane.html" title="Voiture occasion Megane">
+<span>Megane</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::Polo&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-volkswagen-polo.html" title="Voiture occasion Polo">
+<span>Polo</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::Twingo&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--6 bold" href="https://www.lacentrale.fr/occasion-voiture-modele-renault-twingo.html" title="Voiture occasion Twingo">
+<span>Twingo</span>
+</a>
+</li>
+<li>
+<a data-xtclick="{&quot;label&quot;:&quot;top_des_modeles::tous&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}" class="cbm-btn--4 bold" href="https://www.lacentrale.fr/occasion-voiture-modele.html" title="Tous les modèles de voitures d&#x27;occasion">
+<span>Tous les mod&egrave;les</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script data-pipe>Pipe.end(6)</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-tops/top-regions-2ae78de4.css"><script data-pipe>Pipe.start(7, "https://www.lacentrale.fr/static/fragment-tops/top-regions-2ae78de4.js", {"primary":false,"id":7,"range":[7,7]})</script><div class="fastAccessLine fastAccessLineRegions cat_auto">
+<div class="fastAccessVehicles">
+<h2 class="cbm-title--section">Voitures d'occasion par r&eacute;gions</h2>
+<div class="fastAccessLineRegionsContainer clearPhone">
+<div id="mapping" class="topRegionsMap hiddenPhone hiddenTablet">
+<img name="Map_vitrines" src="https://www.lacentrale.fr/static/fragment-tops/regionsmap-aa9fffe1.png" width="263" height="256" border="0" id="Map_vitrines" usemap="#m_Map_vitrines" alt="carte de France d&eacute;coup&eacute;e par r&eacute;gions"/>
+<map name="m_Map_vitrines" id="m_Map_vitrines">
+<area shape="poly" title="Alsace : &lt;br&gt; 67 - Bas-Rhin,&lt;br&gt; 68 - Haut-Rhin" href="https://www.lacentrale.fr/region/occasion-voiture-alsace.html" alt="Alsace" coords="223,81, 221,80, 220,76, 224,72, 225,69, 223,67, 220,68, 218,65, 221,61, 224,64, 229,63, 230,60, 232,60, 242,62, 241,66, 237,69, 231,88, 232,89, 229,96, 230,99, 227,103, 225,104, 224,105, 221,103, 221,101, 219,99, 218,96, 215,95, 219,88, 220,84, 223,81">
+<area shape="poly" title="Aquitaine : &lt;br&gt; 24 - Dordogne,&lt;br&gt; 33 - Gironde,&lt;br&gt; 40 - Landes,&lt;br&gt; 47 - Lot-et-Garonne,&lt;br&gt; 64 - Pyr&eacute;n&eacute;es-Atlantiques" href="https://www.lacentrale.fr/region/occasion-voiture-aquitaine.html" alt="Aquitaine" coords="103,178, 103,179, 101,181, 102,184, 99,184, 98,185, 100,187, 99,191, 95,191, 95,192, 94,193, 90,192, 87,193, 83,193, 81,195, 80,194, 75,196, 76,202, 73,205, 78,204, 79,208, 80,209, 80,212, 75,216, 75,219, 73,218, 72,224, 66,223, 63,220, 55,216, 54,214, 52,216, 49,215,51,211, 49,209, 47,210,46,208, 44,208, 43,206, 47,206, 50,203, 53,200, 56,191, 59,176, 59,173, 64,173, 62,170, 60,172, 61,167, 63,157, 63,150, 65,148, 65,151, 69,155, 72,164, 71,155, 74,155, 76,157, 76,160, 79,160, 82,163, 84,162, 85,160, 90,157, 90,155, 93,154, 95,149, 98,147, 103,149, 107,155, 109,155, 109,158, 107,160, 110,164, 110,169, 106,175,106,177, 103,178">
+<area shape="poly" title="Bretagne : &lt;br&gt; 22 - C&ocirc;tes-d&apos;Armor,&lt;br&gt; 29 - Finist&egrave;re,&lt;br&gt; 35 - Ille-et-Vilaine,&lt;br&gt; 56 - Morbihan" href="https://www.lacentrale.fr/region/occasion-voiture-bretagne.html" alt="Bretagne" coords="54,89, 53,92, 49,94, 43,93, 40,91, 43,91, 43,89, 39,89, 37,90, 37,94, 35,92, 36,89, 35,87, 33,85, 31,86, 28,83, 23,82, 22,80, 18,80, 18,82, 14,80, 11,75, 7,73, 14,73, 17,72, 14,69, 13,70, 12,69, 11,68, 12,66, 14,68, 18,68, 16,65, 17,64, 14,65, 9,65, 8,63, 10,62,10,60, 16,58, 18,59, 24,58,26,60, 28,57, 29,60, 34,55, 38,55, 42,54, 42,57, 44,59, 48,65, 52,62, 56,62, 56,65, 58,64, 59,65, 61,64, 60,62, 63,62, 63,63, 63,64, 67,64, 67,67, 70,69, 72,66, 76,67, 76,73, 74,75, 75,80, 75,82, 72,82, 72,83, 69,87, 66,85, 63,87, 60,87, 58,88, 54,89">
+<area shape="poly" title="Centre : &lt;br&gt; 18 - Cher,&lt;br&gt; 28 - Eure-et-Loir,&lt;br&gt; 36 - Indre,&lt;br&gt; 37 - Indre-et-Loire,&lt;br&gt; 41 - Loir-et-Cher,&lt;br&gt; 45 - Loiret" href="https://www.lacentrale.fr/region/occasion-voiture-centre.html" alt="Centre" coords="126,129, 119,129, 115,130, 110,129, 107,122, 107,118, 104,117, 100,111, 96,112, 96,108, 92,106, 91,103, 94,101, 95,94, 103,94, 103,90, 107,88, 107,83, 110,82, 107,79, 107,76, 110,75, 110,71, 109,69, 110,67, 118,64, 120,66, 120,70, 124,73, 127,79, 134,78, 136,83,145,84, 145,90, 143,95,144,99, 142,100, 142,103, 144,106, 144,114, 145,117, 145,119, 145,120, 135,122, 134,127, 128,130, 126,129">
+<area shape="poly" title="&Icirc;le-de-France : &lt;br&gt; 75 - Paris,&lt;br&gt; 77 - Seine-et-Marne,&lt;br&gt; 78 - Yvelines,&lt;br&gt; 91 - Essonne,&lt;br&gt; 92 - Hauts-de-Seine,&lt;br&gt; 93 - Seine-Saint-Denis,&lt;br&gt; 94 - Val-de-Marne,&lt;br&gt; 95 - Val-d&apos;Oise" href="https://www.lacentrale.fr/region/occasion-voiture-ile-de-france.html" alt="Île-de-France" coords="143,84, 136,83, 134,78, 127,79, 124,73, 120,70, 120,66, 118,64, 119,58, 123,56, 130,55, 132,57, 135,56, 138,59, 149,59, 149,57, 154,64, 155,71, 153,73, 153,79, 147,79, 143,84">
+<area shape="poly" title="Languedoc Roussillon : &lt;br&gt; 11 - Aude,&lt;br&gt; 30 - Gard,&lt;br&gt; 34 - H&eacute;rault,&lt;br&gt; 48 - Loz&egrave;re,&lt;br&gt; 66 - Pyr&eacute;n&eacute;es-Orientales" href="https://www.lacentrale.fr/region/occasion-voiture-languedoc-roussillon.html" alt="Languedoc Roussillon" coords="129,213, 132,211, 130,208, 132,206, 135,208, 138,205, 140,206, 142,201, 143,202, 146,200, 146,198, 149,196, 146,195, 147,192, 142,191, 142,184, 140,180, 143,173, 147,171, 149,173, 150,175, 151,175, 152,173, 154,173, 154,175, 157,176, 160,185, 161,186, 162,188, 165,190,167,188, 169,188,169,190, 175,189, 173,192, 176,196, 177,199, 172,202, 172,206, 168,207, 169,209, 165,210, 165,212, 162,212, 161,209, 154,212, 152,215, 149,216, 147,217, 142,218, 138,224, 138,228, 138,235, 140,235, 141,238, 140,240, 138,238, 133,238, 131,241, 129,239, 126,242, 123,239, 121,238, 116,240, 113,236, 120,231, 119,229, 116,230,114,228, 117,225, 117,221, 112,217, 112,213, 114,213, 115,211, 118,212, 119,211, 123,213, 123,211, 129,213">
+<area shape="poly" title="Midi Pyr&eacute;n&eacute;es : &lt;br&gt; 09 - Ari&egrave;ge,&lt;br&gt; 12 - Aveyron,&lt;br&gt; 31 - Haute-Garonne,&lt;br&gt; 32 - Gers,&lt;br&gt; 46 - Lot,&lt;br&gt; 65 - Hautes-Pyr&eacute;n&eacute;es,&lt;br&gt; 81 - Tarn,&lt;br&gt; 82 - Tarn-et-Garonne" href="https://www.lacentrale.fr/region/occasion-voiture-midi-pyrenees.html" alt="Midi Pyrénées" coords="138,205, 135,208, 132,206, 130,208, 132,211, 129,213, 123,211, 123,213, 119,211, 118,212, 115,211, 115,213, 112,213, 112,217, 117,221, 117,225, 114,228, 116,230, 119,229, 120,231, 113,236, 110,235, 111,233, 109,232, 105,231, 103,228, 101,229, 95,225, 91,225, 91,229,87,228, 85,228, 83,229,81,227, 77,227, 72,224, 73,218, 75,219, 75,216, 80,212, 80,209, 79,208, 78,204, 73,205, 76,202, 75,196, 80,194, 81,195, 83,193, 87,193, 90,192, 94,193, 95,192, 95,191, 99,191, 100,187, 98,185, 99,184, 102,184, 101,181, 103,179, 103,178, 106,177, 106,175, 110,169, 115,170, 123,169, 122,173, 125,174, 124,178, 125,179, 130,179,136,171, 138,176, 140,176, 140,180, 142,184, 142,191, 147,192, 146,195, 149,196, 146,198, 146,200, 143,202, 142,201, 140,206, 138,205">
+<area shape="poly" title="Nord-Pas-de-Calais : &lt;br&gt; 59 - Nord,&lt;br&gt; 62 - Pas-de-Calais" href="https://www.lacentrale.fr/region/occasion-voiture-nord-pas-de-calais.html" alt="Nord-Pas-de-Calais" coords="151,33, 139,31, 140,28, 134,29, 131,25, 127,25, 124,23, 126,11, 129,8, 135,7, 143,6, 144,13, 147,15, 153,13, 156,21, 160,21, 161,26, 169,27, 170,35, 168,37, 165,34, 161,36, 157,34, 153,36, 151,33">
+<area shape="poly" title="Picardie : &lt;br&gt; 02 - Aisne,&lt;br&gt; 60 - Oise,&lt;br&gt; 80 - Somme" href="https://www.lacentrale.fr/region/occasion-voiture-picardie.html" alt="Picardie" coords="149,57, 149,59, 138,59, 135,56, 132,57, 130,55, 123,56, 123,50, 125,47, 123,46, 125,40, 124,36, 122,33, 122,25, 124,23, 127,25, 131,25, 134,29, 140,28, 139,31, 151,33, 153,36, 157,34, 161,36, 165,34, 168,37, 170,35, 171,40, 168,44, 166,51, 158,53, 160,57, 158,57,158,63, 154,64, 149,57">
+<area shape="poly" title="Poitou-Charentes : &lt;br&gt; 16 - Charente,&lt;br&gt; 17 - Charente-Maritime,&lt;br&gt; 79 - Deux-S&egrave;vres,&lt;br&gt; 86 - Vienne" href="https://www.lacentrale.fr/region/occasion-voiture-poitou-charentes.html" alt="Poitou-Charentes" coords="74,127, 67,127, 65,130, 68,134, 66,135, 68,138, 66,141, 63,142, 61,140, 57,138, 57,141, 62,144, 62,145, 62,146, 62,146, 63,146, 66,147, 69,151, 71,155, 71,155, 74,155, 76,157, 76,160, 79,160, 82,163, 84,162, 85,160, 90,157, 90,155, 93,154, 95,149, 98,147, 104,141,101,136, 106,131, 110,129,107,122, 107,118, 104,117, 100,111, 96,112, 96,108, 92,106, 89,108, 79,107, 77,109, 68,107, 73,111, 73,114, 78,117, 76,120, 76,125, 78,127, 74,128, 74,127">
+<area shape="poly" title="Provence-Alpes-C&ocirc;te d&apos;Azur : &lt;br&gt; 04 - Alpes-de-Haute-Provence,&lt;br&gt; 05 - Hautes-Alpes,&lt;br&gt; 06 - Alpes-Maritimes,&lt;br&gt; 13 - Bouches-du-Rh&ocirc;ne,&lt;br&gt; 83 - Var,&lt;br&gt; 84 - Vaucluse,&lt;br&gt; 98 - Monaco" href="https://www.lacentrale.fr/region/occasion-voiture-provence-alpes-cote-d-azur.html" alt="Provence-Alpes-Côte d&#x27;Azur" coords="192,220, 186,220, 184,219, 186,217, 184,215, 179,216, 178,213, 175,213, 175,216, 171,215, 169,212, 165,212, 165,210, 168,209, 168,207, 172,206, 172,202, 177,199, 176,196, 173,192, 175,189, 178,190, 183,189, 181,193, 185,191, 189,194, 191,192, 192,193, 193,192, 191,189,189,189, 187,187,189,185, 192,185, 193,183, 191,182, 192,181, 195,181, 197,177, 199,176, 200,175, 203,175, 206,176, 207,173, 203,171, 204,169, 207,170, 212,168, 217,175, 220,176, 220,180, 218,180, 217,181, 216,184, 218,186, 216,189, 219,191, 223,193, 228,195, 233,194, 234,197, 231,200, 229,205, 224,206, 221,210, 218,210, 216,215, 213,215,211,217, 214,218, 211,221, 207,220, 206,222, 202,221, 202,224, 197,222, 197,224, 194,223, 192,220">
+<area shape="poly" title="Rh&ocirc;ne-Alpes : &lt;br&gt; 01 - Ain,&lt;br&gt; 07 - Ard&egrave;che,&lt;br&gt; 26 - Dr&ocirc;me,&lt;br&gt; 38 - Is&egrave;re,&lt;br&gt; 42 - Loire,&lt;br&gt; 69 - Rh&ocirc;ne,&lt;br&gt; 73 - Savoie,&lt;br&gt; 74 - Haute-Savoie" href="https://www.lacentrale.fr/region/occasion-voiture-rhone-alpes.html" alt="Rhône-Alpes" coords="176,137, 177,135, 178,129, 186,129, 187,131, 185,132, 188,136, 191,134, 193,136, 202,131, 204,136, 200,139, 201,140, 201,140, 206,138, 206,135, 209,133, 217,133, 218,137, 215,138, 217,140, 220,143, 220,147, 216,148, 216,151, 219,154, 220,158, 223,159, 222,161, 221,165,219,165, 217,167,212,168, 207,170, 204,169, 203,171, 207,173, 206,176, 203,175, 200,175, 199,176, 197,177, 195,181, 192,181, 191,182, 193,183, 192,185, 189,185, 187,187, 189,189, 191,189, 193,192, 192,193, 191,192, 189,194, 185,191, 181,193, 183,189, 178,190, 175,189, 169,190, 169,188, 167,188, 165,190, 162,188, 161,186, 160,185, 157,176,165,173, 165,171, 167,170, 167,168, 169,168, 170,165, 168,161, 166,162, 165,160, 159,160, 160,157, 156,149, 157,147, 155,145, 158,142, 158,136, 160,135, 162,137, 167,138, 172,133, 176,137">
+<area shape="poly" title="Corse : &lt;br&gt; 2A - Corse-du-Sud,&lt;br&gt; 2B - Haute-Corse,&lt;br&gt; 20 - Corse" href="https://www.lacentrale.fr/region/occasion-voiture-corse.html" alt="Corse" coords="251,212, 249,219, 248,219, 245,220, 241,221, 238,226, 238,229, 237,230, 237,233, 240,233, 237,237, 240,237, 238,240, 242,241, 240,243, 241,245, 241,247, 245,247, 248,250, 250,247, 251,237, 251,235, 254,232, 254,224, 253,219, 253,213, 251,212, 251,212">
+<area shape="poly" title="Auvergne : &lt;br&gt; 03 - Allier,&lt;br&gt; 15 - Cantal,&lt;br&gt; 43 - Haute-Loire,&lt;br&gt; 63 - Puy-de-D&ocirc;me" href="https://www.lacentrale.fr/region/occasion-voiture-auvergne.html" alt="Auvergne" coords="135,139, 130,133, 128,130, 134,127, 135,122, 145,120, 145,122, 152,124, 155,121, 158,127, 162,129, 162,133, 160,135, 158,136, 158,142, 155,145, 157,147, 156,149, 160,157, 159,160, 165,160, 166,162, 168,161, 170,165, 169,168, 167,168, 167,170, 165,171, 165,173, 157,176,154,175, 154,173,152,173, 151,175, 150,175, 149,173, 147,171, 143,173, 140,180, 140,176, 138,176, 136,171, 130,179, 125,179, 124,178, 125,174, 122,173, 123,169, 125,167, 125,164, 127,163, 128,159, 132,158, 132,157, 133,154, 134,152, 131,149, 132,147, 130,145, 134,144, 135,139">
+<area shape="poly" title="Limousin : &lt;br&gt; 19 - Corr&egrave;ze,&lt;br&gt; 23 - Creuse,&lt;br&gt; 87 - Haute-Vienne" href="https://www.lacentrale.fr/region/occasion-voiture-limousin.html" alt="Limousin" coords="109,155, 107,155, 103,149, 98,147, 104,141, 101,136, 106,131, 110,129, 115,130, 119,129, 126,129, 128,130, 130,133, 135,139, 134,144, 130,145, 132,147, 131,149, 134,152, 133,154, 132,158, 128,159, 127,163, 125,164, 125,167, 123,169, 115,170, 110,169, 110,164, 107,160,109,158, 109,155">
+<area shape="poly" title="Bourgogne : &lt;br&gt; 21 - C&ocirc;te-d&apos;Or,&lt;br&gt; 58 - Ni&egrave;vre,&lt;br&gt; 71 - Sa&ocirc;ne-et-Loire,&lt;br&gt; 89 - Yonne" href="https://www.lacentrale.fr/region/occasion-voiture-bourgogne.html" alt="Bourgogne" coords="144,99, 143,95, 145,90, 145,84, 143,84, 147,79, 153,79, 155,80, 155,83, 158,83, 161,90, 166,90, 167,91, 176,87, 182,94, 181,97, 184,98, 189,99, 191,101, 189,104, 190,107, 190,109, 184,118, 187,121, 184,122, 186,125, 186,129, 178,129, 177,135, 176,137, 172,133, 167,138,162,137, 160,135,162,133, 162,129, 158,127, 155,121, 152,124, 145,122, 145,120, 145,117, 144,114, 144,106, 142,103, 142,100, 144,99">
+<area shape="poly" title="Franche Comt&eacute; : &lt;br&gt; 25 - Doubs,&lt;br&gt; 39 - Jura,&lt;br&gt; 70 - Haute-Sa&ocirc;ne,&lt;br&gt; 90 - Territoire-de-Belfort" href="https://www.lacentrale.fr/region/occasion-voiture-franche-comte.html" alt="Franche Comté" coords="215,95, 218,96, 219,99, 221,101, 221,104, 218,104, 216,106, 220,106, 220,108, 209,117, 208,121, 203,124, 203,124, 204,127, 202,131, 193,136, 191,134, 188,136, 185,132, 187,131, 186,129, 186,125, 184,122, 187,121, 184,118, 190,109, 190,107, 189,104, 191,101, 189,99,192,97, 193,98, 194,97,194,95, 197,91, 203,89, 203,92, 207,90, 210,93, 211,91, 215,95">
+<area shape="poly" title="Pays de la Loire : &lt;br&gt; 44 - Loire-Atlantique,&lt;br&gt; 49 - Maine-et-Loire,&lt;br&gt; 53 - Mayenne,&lt;br&gt; 72 - Sarthe,&lt;br&gt; 85 - Vend&eacute;e" href="https://www.lacentrale.fr/region/occasion-voiture-pays-de-la-loire.html" alt="Pays de la Loire" coords="92,73, 99,71, 101,73, 101,76, 104,77, 107,79, 110,82, 107,83, 107,88, 103,90, 103,94, 95,94, 94,101, 91,103, 92,106, 89,108, 79,107, 77,109, 68,107, 73,111, 73,114, 78,117, 76,120, 76,125, 78,127, 74,128, 74,127, 67,127, 64,126, 61,123, 59,121, 57,121, 55,115, 51,111,53,110, 52,108, 55,107,56,105, 52,103, 54,100, 60,100, 53,99, 50,100, 46,98, 47,98, 47,95, 49,94, 53,92, 54,89, 58,88, 60,87, 63,87, 66,85, 69,87, 72,83, 72,82, 75,82, 75,80, 74,75, 76,73, 76,67, 78,67, 80,70, 89,67, 92,70, 92,73">
+<area shape="poly" title="Basse Normandie : &lt;br&gt; 14 - Calvados,&lt;br&gt; 50 - Manche,&lt;br&gt; 61 - Orne" href="https://www.lacentrale.fr/region/occasion-voiture-basse-normandie.html" alt="Basse Normandie" coords="106,60, 110,67, 109,69, 110,71, 110,75, 107,76, 107,79, 104,77, 101,76, 101,73, 99,71, 92,73, 92,70, 89,67, 80,70, 78,67, 72,66, 70,69, 67,67, 67,64, 70,64, 68,61, 69,49, 65,40, 66,38, 64,36, 66,35, 68,37, 73,37, 76,36, 77,37, 77,39, 76,41, 77,45, 80,45, 94,48, 98,46,101,46, 103,52, 102,59,106,60">
+<area shape="poly" title="Haute Normandie : &lt;br&gt; 27 - Eure,&lt;br&gt; 76 - Seine-Maritime" href="https://www.lacentrale.fr/region/occasion-voiture-haute-normandie.html" alt="Haute Normandie" coords="123,50, 123,56, 119,58, 118,64, 110,67, 107,62, 106,60, 102,59, 103,52, 101,46, 104,45, 107,45, 103,44, 101,44, 98,43, 100,40, 104,37, 109,36, 116,33, 120,31, 122,29, 122,33, 124,36, 125,40, 123,46, 125,47, 123,50">
+<area shape="poly" title="Champagne-Ardenne : &lt;br&gt; 08 - Ardennes,&lt;br&gt; 10 - Aube,&lt;br&gt; 51 - Marne,&lt;br&gt; 52 - Haute-Marne" href="https://www.lacentrale.fr/region/occasion-voiture-champagne-ardenne.html" alt="Champagne-Ardenne" coords="176,87, 176,87, 170,90, 167,92, 165,90, 160,90, 158,83, 155,83, 155,80, 152,79, 153,73, 155,71, 154,64, 158,63, 157,57, 160,57, 158,53, 166,51, 166,50, 167,44, 170,40, 170,35, 175,36, 181,31, 181,40, 183,41, 190,47, 189,48, 185,47, 182,56, 181,61, 183,62, 182,68,180,67, 181,71, 184,72,190,78, 190,81, 194,81, 194,83, 194,85, 193,87, 197,91, 194,95, 194,97, 192,98, 191,97, 189,99, 183,99, 181,97, 181,94, 176,87">
+<area shape="poly" title="Lorraine : &lt;br&gt; 54 - Meurthe-et-Moselle,&lt;br&gt; 55 - Meuse,&lt;br&gt; 57 - Moselle,&lt;br&gt; 88 - Vosges" href="https://www.lacentrale.fr/region/occasion-voiture-lorraine.html" alt="Lorraine" coords="197,91, 203,89, 203,92, 207,90, 210,93, 211,91, 215,95, 219,88, 220,84, 223,81, 221,80, 220,76, 224,72, 225,69, 223,67, 220,68, 218,65, 221,61, 224,64, 229,63, 230,60, 230,60, 229,57, 227,57, 223,58, 218,56, 215,57, 210,50, 208,51, 206,49, 201,50, 197,47, 192,48,190,47, 190,47, 189,48,185,47, 182,56, 181,61, 183,62, 182,68, 180,67, 181,71, 184,72, 190,78, 190,81, 194,81, 194,83, 194,85, 193,87, 197,91, 197,91">
+</map>
+</div>
+<div class="topRegions clearTablet clearPhone">
+<ul>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-alsace.html" title="voiture Alsace" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Alsace&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Alsace</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-aquitaine.html" title="voiture Aquitaine" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Aquitaine&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Aquitaine</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-bretagne.html" title="voiture Bretagne" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Bretagne&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Bretagne</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-centre.html" title="voiture Centre" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Centre&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Centre</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-ile-de-france.html" title="voiture Île-de-France" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Île-de-France&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Île-de-France</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-languedoc-roussillon.html" title="voiture Languedoc Roussillon" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Languedoc Roussillon&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Languedoc Roussillon</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-midi-pyrenees.html" title="voiture Midi Pyrénées" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Midi Pyrénées&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Midi Pyrénées</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-nord-pas-de-calais.html" title="voiture Nord-Pas-de-Calais" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Nord-Pas-de-Calais&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Nord-Pas-de-Calais</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-picardie.html" title="voiture Picardie" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Picardie&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Picardie</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-poitou-charentes.html" title="voiture Poitou-Charentes" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Poitou-Charentes&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Poitou-Charentes</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-provence-alpes-cote-d-azur.html" title="voiture Provence-Alpes-Côte d&#x27;Azur" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Provence-Alpes-Côte d&#x27;Azur&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Provence-Alpes-Côte d'Azur</span>
+</a>
+</li>
+<li>
+<a class="cbm-btn--6 bold" href="https://www.lacentrale.fr/region/occasion-voiture-rhone-alpes.html" title="voiture Rhône-Alpes" data-xtclick='{&quot;label&quot;:&quot;top_des_regions::Rhône-Alpes&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<span>Rhône-Alpes</span>
+</a>
+</li>
+<li>
+<a data-xtclick='{&quot;label&quot;:&quot;top_des_regions::toutes&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}' class="cbm-btn--4 bold" href="https://www.lacentrale.fr/occasion-voiture/regions.html" title="voiture occasion en France">
+<span>Toutes les r&eacute;gions</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script data-pipe>Pipe.end(7, "https://www.lacentrale.fr/static/fragment-tops/top-regions-2ae78de4.js", {"primary":false,"id":7,"range":[7,7]})</script>
+</div>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/marketing-6b6b927a.css"><script data-pipe>Pipe.start(8, "https://www.lacentrale.fr/static/fragment-layout/marketing-6b6b927a.js", {"primary":false,"id":8,"range":[8,8]})</script><script>
+  var MARKETING_PROPS = '{"title":"La vente de votre véhicule en période Coronavirus","images":["https://www.lacentrale.fr/static/fragment-layout/images_260x192_15-27f3c4e3.jpg","https://www.lacentrale.fr/static/fragment-layout/images_260x192_17-a2434fcd.jpg"],"text":"Attentifs à votre sécurité, il nous semble indispensable de vous conseiller sur les bonnes pratiques à adopter pour la vente de votre véhicule dans le contexte actuel, notamment lors de vos rencontres avec de potentiels acquéreurs.","link":"/conseils/vente-voiture/bien-vendre-coronavirus","linkText":"Conseils coronavirus","tracking":{"label":"Home::InfosCoronavirus","typeClick":"navigation"}}';
+</script>
+<div class="commLine clear">
+<h2 class="cbm-title--section">
+Mieux acheter et vendre votre voiture d&#x27;occasion
+</h2>
+<div class="achatVenteVehic hiddenOverflow">
+<div class="floatL w50 placeAd">
+<a href="https://www.lacentrale.fr/vendre-voiture" class="Customer__depositLink block hiddenOverflow" data-xtclick='{&quot;label&quot;:&quot;vignette::vendre&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}' title="Déposer une annonce de voiture d&#x27;occasion">
+<div class="commLine__photoContainer">
+<img class="max100" src="https://www.lacentrale.fr/static/fragment-layout/deposit-auto-9ac7036d.jpg" alt="v&eacute;hicule pr&ecirc;t &agrave; &ecirc;tre mis en vente"/>
+</div>
+<div class="cbm-txt--default hiddenOverflow pR15">
+<h3 class="cbm-size--3 mB10">Passez une annonce</h3>
+<div>
+<strong class="cbm-txt--2">Gratuit</strong>
+pour <strong>tous</strong> les v&eacute;hicules
+</div>
+<p class="mT20">
+Vendez en toute <strong>s&eacute;curit&eacute;</strong>
+</p>
+</div>
+<div class="hiddenOverflow mT20 cbm--txtCTablet">
+<span class="cbm-btn--2 bold"><span>D&eacute;poser une annonce</span></span>
+</div>
+</a>
+</div>
+<div class="floatR w50 searchPros">
+<a href="https://www.lacentrale.fr/pro_list.php?rubrique&#x3D;VEHICULES" data-xtclick='{&quot;label&quot;:&quot;vignette::annuaire_des_pros&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}' title="Les vitrines des professionnels de l'occasion" class="block hiddenOverflow">
+<div class="commLine__photoContainer">
+<img class="max100" src="https://www.lacentrale.fr/static/fragment-layout/car-dealers-directory-96ca1c7f.jpg" alt="couple d'acheteurs rencontrant un concessionnaire"/>
+</div>
+<div class="cbm-txt--default hiddenOverflow pR15">
+<h3 class="cbm-size--3 mB10">Professionnels</h3>
+<p><strong>Trouver un concessionnaire</strong> <span class="block">pr&egrave;s de chez vous</span></p>
+<p class="mT20">Achetez en toute <strong>s&eacute;curit&eacute;</strong></p>
+</div>
+<div class="hiddenOverflow mT20 cbm--txtCTablet">
+<span class="cbm-btn--2 bold"><span>Rechercher un professionnel</span></span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div id="infoBlade"></div>
+<div class="fastAccessPages hiddenPhone">
+<a class="cbm--txtCTablet" data-xtclick='{&quot;label&quot;:&quot;cote_gratuite&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}' href="https://www.lacentrale.fr/lacote_origine.php" title="Cote gratuite, argus gratuit de voitures d&#x27;occasion">
+<span class="circ circ90 cbm-bg--2 b0"><i class="cbm-sprite--price scale90"></i></span>
+<span class="cbm--clearTablet">
+<h2 class="bold cbm-size--3">Cote gratuite</h2>
+<span>Calculez la valeur <br class="cbm--onlyDesktop"/>d'un v&eacute;hicule <br class="cbm--onlyTablet"/>en occasion</span>
+</span>
+</a>
+<a class="cbm--txtCTablet" data-xtclick='{&quot;label&quot;:&quot;rechercher_un_pro&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}' href="https://www.lacentrale.fr/pro_list.php?rubrique&#x3D;VEHICULES" title="Rechercher un professionnel des voitures d'occasion">
+<span class="circ circ90 cbm-bg--2 b0"><i class="cbm-sprite--vendor scale90"></i></span>
+<span class="cbm--clearTablet">
+<h2 class="bold cbm-size--3">Rechercher un pro</h2>
+<span>Trouver un concessionnaire <br/>pr&egrave;s de chez vous !</span>
+</span>
+</a>
+</div>
+<script data-pipe>Pipe.end(8, "https://www.lacentrale.fr/static/fragment-layout/marketing-6b6b927a.js", {"primary":false,"id":8,"range":[8,8]})</script>
+<script data-pipe>Pipe.start(9)</script><div class="TvSpotBanner hiddenPhone">
+<a href="https://www.lacentrale.fr/informations/spot" data-xtclick='{&quot;xtn2&quot;:&quot;65&quot;,&quot;label&quot;:&quot;Spot-LC-2017&quot;,&quot;typeClick&quot;:&quot;navigation&quot;}'>
+<img class="max100" src="https://www.lacentrale.fr/static/fragment-layout/spot_banner-d3cc94f5.jpg" alt="Voir le spot TV Lacentrale.fr" title="Seule La Centrale vous donne toutes les clés pour ne pas vous tromper">
+</a>
+</div>
+<script data-pipe>Pipe.end(9)</script>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-user-classified-data/classified-cards-35010a05.css"><script data-pipe>Pipe.start(10, "https://www.lacentrale.fr/static/fragment-user-classified-data/classified-cards-35010a05.js", {"primary":false,"id":10,"range":[10,10]})</script><div id="ClassifiedCards-0" data-vertical="auto"></div><script data-pipe>Pipe.end(10, "https://www.lacentrale.fr/static/fragment-user-classified-data/classified-cards-35010a05.js", {"primary":false,"id":10,"range":[10,10]})</script>
+</section>
+<link rel="stylesheet" href="https://www.lacentrale.fr/static/fragment-layout/footer-f1f0472d.css"><script data-pipe>Pipe.start(11, "https://www.lacentrale.fr/static/fragment-layout/footer-f1f0472d.js", {"primary":false,"id":11,"range":[11,11]})</script><footer class="containerSite containerFooter cbm--hiddenPrint">
+<section>
+<section class="line line1">
+<div class="col col1 cbm--clearPhone">
+<h3 class="footerTitle cbm-size--3">Nous contacter</h3>
+<div class="footerContent">
+<ul>
+<li>
+<span>
+<span class="circ circ50 cbm-bg--3 b0">
+<i class="cbm-picto--mailWhite" style="transform:scale(1.2);"></i>
+</span>
+</span>
+<span>
+<a href="https://www.lacentrale.fr/nous-contacter.php" rel="nofollow">
+<strong> Par email </strong>
+<br/>
+ou par courrier
+</a>
+</span>
+</li>
+<li class="footerProAccess">
+<div>
+Vous &ecirc;tes un Pro ?
+</div>
+<div>
+<a href="https://pilot.lacentrale.fr" class="cbm-btn--2" target="_blank" rel="noopener noreferrer" data-xtclick='{"label":"Footer::AccesPro::bouton", "typeClick":"navigation"}'>
+Accès client pro
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="col col2 cbm--clearPhone">
+<h3 class="footerTitle cbm-size--3"> La Centrale <sup>&reg;</sup> sur votre mobile </h3>
+<div class="footerContent">
+<div>
+D&eacute;sormais &agrave; port&eacute;e de main sur <br/>
+iOS et Android.
+</div>
+<div>
+<a href="https://itunes.apple.com/fr/app/la-centrale-voiture-doccasion/id392283088?mt=8&amp;amp;xtor&#x3D;AD-1-[Footer]---[https://www.lacentrale.fr]--[LC]" target="_blank" class="mR10">
+<i class="cbm-sprite--applisApple" title="Disponible pour iPhone App Store"></i>
+</a>
+<a href="https://play.google.com/store/apps/details?id=fr.carboatmedia.lacentrale&amp;amp;referrer&#x3D;https://www.lacentrale.fr&amp;amp;xtor&#x3D;AD-1-[Footer]---[https://www.lacentrale.fr]--[LC]" target="_blank" class="mR10">
+<i class="cbm-sprite--applisGoogle" title="Android App sur Google Play"></i>
+</a>
+</div>
+<div>
+<a href="/informations/applications" class="cbm-btn--4 cbm-btn--apps hiddenPhone" data-xtclick='{"xtn2":"65", "label":"Vers_promo_apps_mobiles::Bas", "typeClick":"navigation"}'>
+&gt; D&eacute;couvrir nos applications
+</a>
+</div>
+</div>
+</div>
+<div class="col col3 hiddenPhone">
+<h3 class="footerTitle cbm-size--3"> &Agrave; propos </h3>
+<div class="footerContent">
+<ul>
+<li>
+<a href="https://www.lacentrale.fr/informations/qui-sommes-nous" title="La Centrale &reg;">
+Qui sommes nous ?
+</a>
+</li>
+<li>
+<a href="https://www.groupelacentrale.fr/#rejoignez_nous" target="_blank">
+Nos offres d'emplois
+</a>
+</li>
+<li>
+<a href="/informations/spot" data-xtclick='{"xtn2":"65", "label":"Spot-LC", "typeClick":"navigation"}'>
+Pub La Centrale <sup>&reg;</sup>
+</a>
+</li>
+<li>
+<a href="https://www.drivemedia.fr/" target="_blank">
+Devenir annonceur
+</a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="line line2">
+<ul>
+<li><a href="https://www.lacentrale.fr/informations/conditions-generales" rel="nofollow">Conditions g&eacute;n&eacute;rales</a></li>
+<li><a href="https://www.lacentrale.fr/informations/mentions-legales" rel="nofollow">Mentions l&eacute;gales</a></li>
+<li><a href="https://www.lacentrale.fr/informations/information-classement" rel="nofollow">Information sur le classement</a></li>
+<li><a href="https://www.lacentrale.fr/informations/charte-cookies" rel="nofollow">Charte cookies</a></li>
+<li><a href="https://www.lacentrale.fr/informations/politique-confidentialite" rel="nofollow">Politique de confidentialit&eacute;</a></li>
+<li><a href="https://www.lacentrale.fr/static/fragment-layout/charte_redactionnelle-0effccfe.pdf" rel="nofollow" target="_blank">Charte r&eacute;dactionnelle</a></li>
+<li><a href="https://www.lacentrale.fr/informations/plan-du-site">Plan du site</a></li>
+</ul>
+</section>
+<section class="line line3 cbm-size--1" id="copyright">
+Copyright &copy;
+<a href="http://www.groupelacentrale.fr/" title="Groupe La Centrale" target="_blank">Groupe La Centrale</a>
+&nbsp;-&nbsp;
+Tous droits r&eacute;serv&eacute;s
+</section>
+</section>
+<section class="line line4 hiddenPhone">
+<h3 class="footerTitle cbm-size--3"> Sites du groupe : </h3>
+<div class="footerContent">
+<ul>
+<li>
+<a href="https://www.caradisiac.com" target="_blank">
+Actualit&eacute; automobile <span> <i class="cbm-sprite--partnersCaradisiac"></i> </span>
+</a>
+</li>
+<li>
+<a href="https://forum-auto.caradisiac.com" target="_blank">
+Forum auto <span> <i class="cbm-sprite--partnersForumAuto"></i> </span>
+</a>
+</li>
+<li>
+<a href="https://www.promoneuve.fr" target="_blank">
+Voitures neuves <span> <i class="cbm-sprite--partnersPromoneuve"></i> </span>
+</a>
+</li>
+<li>
+<a href="https://www.mavoiturecash.fr" target="_blank">
+Rachat de voiture <span> <i class="cbm-sprite--partnersMVC"></i> </span>
+</a>
+</li>
+</ul>
+</div>
+</section>
+</footer>
+<script>var fragment_footer_locals = '{&quot;isTestPage&quot;:false,&quot;vertical&quot;:&quot;auto&quot;,&quot;site&quot;:{&quot;commandersAct&quot;:{&quot;label&quot;:&quot;LC&quot;},&quot;appTracker&quot;:{&quot;label&quot;:&quot;LC&quot;}},&quot;page&quot;:{&quot;id&quot;:&quot;home&quot;,&quot;section&quot;:&quot;home&quot;,&quot;xiti&quot;:{&quot;mvTesting&quot;:{}}}}';</script>
+<script>
+
+  (function() {
+
+    'use strict';
+
+    if (typeof jQuery === 'function') {
+
+
+      // Chargement de Module Event
+
+      var moduleEventUrl      = "https://www.lacentrale.fr/static/fragment-layout/event-72342adb.js",
+          moduleEventFunction = function(){ ModuleEvent.init('https://www.lacentrale.fr'); };
+
+      $.getScript(moduleEventUrl, moduleEventFunction);
+
+    }
+
+  })();
+
+</script>
+<script>
+  window.readCookie = function readCookie(name) {
+    var nameEQ = "".concat(name, "=");
+    var ca = document.cookie.split(';');
+
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1, c.length);
+      }
+
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+
+    return null;
+  };
+
+  window.createCookie = function createCookie(name, value, days) {
+    var expires = '';
+
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      expires = "; expires=".concat(date.toGMTString());
+    }
+
+    document.cookie = "".concat(name, "=").concat(value).concat(expires, "; path=/; samesite");
+  };
+
+  window._sp_ = {
+    config: {
+      accountId: 1348,
+      wrapperAPIOrigin: "https://wrapper-api.sp-prod.net/tcfv2",
+      mmsDomain: "https://message1348.sp-prod.net",
+      domainName: "LC",
+      events: {
+        onMessageChoiceSelect: function (choice_id, choice_type_id) {
+          switch (choice_type_id) {
+            case 11:
+              kvalueTarget = 'pubOk';
+              break;
+            case 13:
+              kvalueTarget = 'pubKo';
+              break;
+            default:
+              kvalueTarget = window.readCookie('kvalueTarget');
+              break;
+          }
+
+          window.createCookie('kvalueTarget', kvalueTarget);
+        },
+        onPrivacyManagerAction: function (pmData) {
+          if (pmData.purposeConsent === 'none' && pmData.vendorConsent === 'none') {
+            kvalueTarget = 'pubKo';
+          } else {
+            kvalueTarget = 'pubOk';
+          }
+          window.createCookie('kvalueTarget', kvalueTarget);
+        },
+        onPMCancel: function () {
+          window.createCookie('kvalueTarget', 'pubKo');
+        }
+      }
+    }
+  }
+</script>
+<script src="https://gdpr-tcfv2.sp-prod.net/wrapperMessagingWithoutDetection.js"></script>
+<script data-pipe>Pipe.end(11, "https://www.lacentrale.fr/static/fragment-layout/footer-f1f0472d.js", {"primary":false,"id":11,"range":[11,11]})</script>
+</section>
+</body></html>
